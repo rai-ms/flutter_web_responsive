@@ -14,26 +14,25 @@ class MobileViewLoginPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double marginTop = MediaQuery.of(context).viewPadding.top;
     return Padding(
-        padding: EdgeInsets.only(
-          top: marginTop,
-        ),
-        child: Container(
-          color: Color.fromARGB(136, 132, 178, 230),
-          width: size.width,
-          child: const SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                CombineTopLoginPageStack(),
-                InfoProfileProvide(),
-                MultipleProfileCreative(),
-                DownloadAppContainer(),
-                BottomStackCombine(),
-              ],
-            ),
+      padding: EdgeInsets.only(
+        top: marginTop,
+      ),
+      child: Container(
+        color: Color.fromARGB(136, 132, 178, 230),
+        width: size.width,
+        child: const SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              CombineTopLoginPageStack(),
+              InfoProfileProvide(),
+              MultipleProfileCreative(),
+              DownloadAppContainer(),
+              BottomStackCombine(),
+            ],
           ),
         ),
-
+      ),
     );
   }
 }

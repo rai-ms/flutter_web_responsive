@@ -11,18 +11,21 @@ class InfoProfileLogoLink extends StatelessWidget {
       children: [
         SizedBox(
             width: 200, child: Image.asset("assets/images/logo_profile.png")),
-        Text(
+        const Text(
           "Not a  normal app, its unique!",
-          style: TextStyle(color: Colors.white, fontSize: 16),
+          style: TextStyle(color: Colors.white, fontSize: 14),
         ),
-        Text(
+        const Text(
           "Services are provided everywhere.",
-          style: TextStyle(color: Colors.white, fontSize: 16),
+          style: TextStyle(color: Colors.white, fontSize: 14),
         ),
-        SizedBox(
-          height: 10,
+        const SizedBox(
+          height: 20,
         ),
         SizedBox(height: 45, child: Image.asset("assets/images/media.png")),
+        SizedBox(
+          height: 20,
+        ),
       ],
     );
   }

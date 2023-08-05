@@ -10,7 +10,7 @@ class CombineTopLoginPageStack extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       child: Stack(
         children: [
           TopBackgroundLoginPage(),
@@ -26,7 +26,7 @@ class CombineTopTwoItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         NavBarLoginPage(),
         ContainerMeetYourBestLogin(),

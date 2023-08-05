@@ -7,14 +7,18 @@ class MultipleProfileCreative extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        MultipleProfileRow(),
-        MultipleProfileRow2(),
-        SizedBox(
-          height: 10,
-        ),
-      ],
+    double width = MediaQuery.of(context).size.width;
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: width * .1),
+      child: Column(
+        children: [
+          MultipleProfileRow(),
+          MultipleProfileRow2(),
+          SizedBox(
+            height: 10,
+          ),
+        ],
+      ),
     );
   }
 }

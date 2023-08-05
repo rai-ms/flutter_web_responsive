@@ -6,16 +6,13 @@ class HelpSupportFooter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
-          height: 30,
-        ),
         Text(
           "Help & Support",
           style: TextStyle(
-              color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
+              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
         SizedBox(
           height: 10,
@@ -23,7 +20,7 @@ class HelpSupportFooter extends StatelessWidget {
         Text(
           "Getting Started FAQ",
           style: TextStyle(
-              color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
+              color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
         ),
         SizedBox(
           height: 5,

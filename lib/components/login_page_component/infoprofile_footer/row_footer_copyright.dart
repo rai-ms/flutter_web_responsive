@@ -9,15 +9,17 @@ class RowfooterCopyRight extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        SizedBox(
-            height: 15,
-            child: Image.asset(
-              "assets/images/copyright.png",
-              fit: BoxFit.fitHeight,
-            )),
-        Text(
-          "All rights reserved",
-          style: TextStyle(fontSize: 15, color: Colors.white),
+        Expanded(
+          child: Text(
+            "Copyright InfoprofileLTD",
+            style: TextStyle(color: Colors.white, fontSize:  12),
+          ),
+        ),
+        Expanded(
+          child: Text(
+            "All rights reserved",
+            style: TextStyle(color: Colors.white, fontSize:  12),
+          ),
         )
       ],
     );

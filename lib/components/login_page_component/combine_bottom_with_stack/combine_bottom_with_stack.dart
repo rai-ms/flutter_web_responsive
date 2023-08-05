@@ -8,12 +8,13 @@ class BottomStackCombine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return SizedBox(
       child: Stack(
         alignment: Alignment.center,
         children: [
           CombineFooterAndConnections(),
-          Positioned(bottom: 760, child: TryInfoProfile()),
+          Positioned(bottom: (width > 1120)? 260 : (width >= 720)? 390 : 740, child: TryInfoProfile()),
         ],
       ),
     );

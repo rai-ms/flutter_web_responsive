@@ -44,8 +44,8 @@ class _ProviderModelInfoProfileState extends State<ProviderModelInfoProfile> {
       },
       child: Container(
         constraints: BoxConstraints(
-          maxWidth: 200,
-          maxHeight: 300,
+          maxWidth: (width <= 450)? 200 : 300,
+          maxHeight: (width <= 450)? 300 : 280,
         ),
         padding: EdgeInsets.all(30),
         decoration: BoxDecoration(

@@ -13,9 +13,10 @@ class WrapInfoProfileProvide extends StatefulWidget {
 class _WrapInfoProfileProvideState extends State<WrapInfoProfileProvide> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Wrap(
-      spacing: 10,
-      runSpacing: 10,
+      spacing: (width <= 450)? 10 : width * .05,
+      runSpacing: 20,
       children: [
         ProviderModelInfoProfile(),
         ProviderModelInfoProfile(

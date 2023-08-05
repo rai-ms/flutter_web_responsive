@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
+import '../../web_view/changes_web_view/infoprofile_footer_web.dart';
 import '../infoprofile_footer/infoprofile_footer.dart';
 import '../make_connection/make_connection.dart';
 import '../try_infoprofile/try_infoprofile.dart';
@@ -16,7 +17,7 @@ class CombineFooterAndConnections extends StatelessWidget {
           SizedBox(
             height: 100,
           ),
-          InfoProfileFooter(),
+          InfoProfileFooterResponsiveView(),
         ],
       ),
     );
