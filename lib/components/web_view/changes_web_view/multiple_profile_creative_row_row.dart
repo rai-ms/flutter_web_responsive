@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/image_path/app_image_path_container.dart';
+import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
+
+import '../../colors/colors.dart';
 
 class MultipleProfileRowWebView extends StatelessWidget {
   const MultipleProfileRowWebView({super.key});
@@ -19,20 +23,20 @@ class MultipleProfileRowWebView extends StatelessWidget {
               style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
               children: [
                 TextSpan(
-                  text: "You can create",
+                  text: AppStrings.youCanCreate,
                   style: TextStyle(fontSize: 20, color: Colors.black),
                 ),
                 TextSpan(
-                  text: " Multiple profiles ",
-                  style: TextStyle(fontSize: 20, color: Colors.blue),
+                  text: " ${AppStrings.multipleProfiles} ",
+                  style: TextStyle(
+                      fontSize: 20, color: AppColors.backgroundThemeColor),
                 ),
                 TextSpan(
-                  text: "for your account.",
+                  text: AppStrings.forYourAccount,
                   style: TextStyle(fontSize: 20, color: Colors.black),
                 ),
                 TextSpan(
-                  text:
-                      "\nA domain that helps you develop your skills through building multiple portals to solve problems . All you need is a laptop and an attitude to learn and progress. We primarily deal with Web Dev, App Dev and Blockchain elements.",
+                  text: "\n${AppStrings.aDomainThat}",
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.normal,
@@ -42,10 +46,7 @@ class MultipleProfileRowWebView extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
-            height: 600,
-            width: 400,
-            child: Image.asset("assets/images/run_png.png")),
+        SizedBox(height: 600, width: 400, child: Image.asset(AppImage.runPng)),
       ],
     );
   }
@@ -61,8 +62,7 @@ class MultipleProfileRow2WebView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
-            height: 450, child: Image.asset("assets/images/image_bulb.png")),
+        SizedBox(height: 450, child: Image.asset(AppImage.imageBulb)),
         SizedBox(
           width: width * .3,
           height: width * .2,
@@ -72,20 +72,20 @@ class MultipleProfileRow2WebView extends StatelessWidget {
               style: TextStyle(fontSize: 55, fontWeight: FontWeight.w600),
               children: [
                 TextSpan(
-                  text: "Be ",
+                  text: "${AppStrings.be} ",
                   style: TextStyle(fontSize: 20, color: Colors.black),
                 ),
                 TextSpan(
-                  text: " Creative ",
-                  style: TextStyle(fontSize: 20, color: Colors.blue),
+                  text: " ${AppStrings.creative} ",
+                  style: TextStyle(
+                      fontSize: 20, color: AppColors.backgroundThemeColor),
                 ),
                 TextSpan(
-                  text: "in your own way by joining or buiding a community.",
+                  text: AppStrings.inYourOwnWay,
                   style: TextStyle(fontSize: 20, color: Colors.black),
                 ),
                 TextSpan(
-                  text:
-                      "\n\nHere we produce unusual ideas, reflecting the originality of the GitHub Community SRM. We build a transformative experience for our members in the creative field dealing with UI/UX, VFX/GFX, Content Writing and Photography elements.",
+                  text: "\n\n+${AppStrings.hereWeProduce}",
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.normal,

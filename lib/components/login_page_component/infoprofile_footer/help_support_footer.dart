@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../strings/string_web_assignment.dart';
+
 class HelpSupportFooter extends StatelessWidget {
   const HelpSupportFooter({super.key});
 
@@ -10,7 +12,7 @@ class HelpSupportFooter extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Help & Support",
+          AppStrings.helpSupportFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
@@ -18,7 +20,7 @@ class HelpSupportFooter extends StatelessWidget {
           height: 10,
         ),
         Text(
-          "Getting Started FAQ",
+          AppStrings.gettingStartedFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
         ),

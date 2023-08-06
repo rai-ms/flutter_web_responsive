@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_assignment/components/login_page_component/infoprofile_footer/row_footer_copyright.dart';
 
+import '../../colors/colors.dart';
 import 'company_footer.dart';
 import 'feature_footer.dart';
 import 'help_support_footer.dart';
@@ -15,7 +16,7 @@ class InfoProfileFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Container(
-      color: Colors.blueAccent,
+      color: AppColors.backgroundThemeColor,
       width: width,
       padding: EdgeInsets.only(left: 30, right: 30, top: 120),
       child: Column(

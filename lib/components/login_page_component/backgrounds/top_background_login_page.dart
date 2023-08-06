@@ -1,35 +1,37 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/image_path/app_image_path_container.dart';
 
 class TopBackgroundLoginPage extends StatelessWidget {
   const TopBackgroundLoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    double wd = MediaQuery.of(context).size.width;
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Stack(
         children: [
           Container(
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxHeight: 744,
               ),
-              child: Image.asset("assets/images/left_card.png")),
+              child: Image.asset(AppImage.leftCard)),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              SizedBox(),
+              const SizedBox(),
               Flexible(
                   child: Container(
-                      constraints: BoxConstraints(
+                      constraints: const BoxConstraints(
                         maxHeight: 744,
                       ),
                       child: Image.asset(
-                        "assets/images/right_card.png",
+                        AppImage.rightCard,
                         alignment: Alignment.bottomRight,
-                      ))),
+                      )
+                  )
+              ),
             ],
           ),
         ],

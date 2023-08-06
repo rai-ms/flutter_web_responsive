@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../colors/colors.dart';
+
 class ProviderModelInfoProfile extends StatefulWidget {
   Color color;
   String title, body;
@@ -19,8 +21,9 @@ class ProviderModelInfoProfile extends StatefulWidget {
 }
 
 class _ProviderModelInfoProfileState extends State<ProviderModelInfoProfile> {
-  Color textColor = Colors.blue,
-      iconColor = Colors.blue,
+  Color textColor = AppColors.backgroundThemeColor,
+      iconColor = AppColors.backgroundThemeColor,
+      bodyTextColor = Colors.black,
       iconBgColor = Colors.black;
 
   @override
@@ -31,23 +34,25 @@ class _ProviderModelInfoProfileState extends State<ProviderModelInfoProfile> {
     double? containerHeight = 100;
     return MouseRegion(
       onEnter: (_) {
-        widget.color = Colors.blue;
+        widget.color = AppColors.backgroundThemeColor;
         textColor = Colors.white;
-        iconColor = Colors.blue;
+        iconColor = AppColors.backgroundThemeColor;
+        bodyTextColor = Colors.white;
         setState(() {});
       },
       onExit: (_) {
         widget.color = Colors.transparent;
-        textColor = Colors.blue;
+        textColor = AppColors.backgroundThemeColor;
+        bodyTextColor = Colors.black;
         iconColor = Colors.white;
         setState(() {});
       },
       child: Container(
         constraints: BoxConstraints(
-          maxWidth: (width <= 450)? 200 : 300,
-          maxHeight: (width <= 450)? 300 : 280,
+          maxWidth: (width <= 450) ? 210 : 330,
+          maxHeight: (width <= 450) ? 260 : 280,
         ),
-        padding: EdgeInsets.all(30),
+        padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           color: widget.color,
           borderRadius: BorderRadius.circular(20),
@@ -63,18 +68,20 @@ class _ProviderModelInfoProfileState extends State<ProviderModelInfoProfile> {
                     color: Colors.blue.shade200,
                     borderRadius: BorderRadius.circular(10)),
                 child: widget.icon),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
               widget.title,
               style: TextStyle(
-                  color: textColor, fontSize: 14, fontWeight: FontWeight.w900),
+                  color: textColor,
+                  fontSize: (width <= 450) ? 16 : 20,
+                  fontWeight: FontWeight.w900),
               textAlign: TextAlign.center,
             ),
             Text(
               widget.body,
-              style: TextStyle(fontSize: 15),
+              style: TextStyle(fontSize: 15, color: bodyTextColor),
             ),
           ],
         ),

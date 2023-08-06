@@ -18,7 +18,7 @@ class MobileViewLoginPage extends StatelessWidget {
         top: marginTop,
       ),
       child: Container(
-        color: Color.fromARGB(136, 132, 178, 230),
+        color: const Color.fromARGB(136, 132, 178, 230),
         width: size.width,
         child: const SingleChildScrollView(
           child: Column(

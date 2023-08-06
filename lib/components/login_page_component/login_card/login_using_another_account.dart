@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/image_path/app_image_path_container.dart';
 
 class LoginUsingAccount extends StatelessWidget {
+  const LoginUsingAccount({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,15 +15,15 @@ class LoginUsingAccount extends StatelessWidget {
           SizedBox(
               height: 45,
               width: 45,
-              child: Image.asset("assets/images/google_logo.png")),
+              child: Image.asset(AppImage.googleLogo)),
           SizedBox(
               height: 45,
               width: 45,
-              child: Image.asset("assets/images/facebook_logo.png")),
+              child: Image.asset(AppImage.facebookLogo)),
           SizedBox(
               height: 45,
               width: 45,
-              child: Image.asset("assets/images/linked_logo.png")),
+              child: Image.asset(AppImage.linkedInLogo)),
         ],
       ),
     );

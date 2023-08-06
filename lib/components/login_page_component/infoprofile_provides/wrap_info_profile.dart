@@ -1,33 +1,33 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
 import 'model_provider.dart';
 
-class WrapInfoProfileProvide extends StatefulWidget {
+class WrapInfoProfileProvide extends StatelessWidget {
   const WrapInfoProfileProvide({super.key});
 
   @override
-  State<WrapInfoProfileProvide> createState() => _WrapInfoProfileProvideState();
-}
-
-class _WrapInfoProfileProvideState extends State<WrapInfoProfileProvide> {
-  @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
+    double width = MediaQuery
+        .of(context)
+        .size
+        .width;
     return Wrap(
-      spacing: (width <= 450)? 10 : width * .05,
-      runSpacing: 20,
+      crossAxisAlignment: WrapCrossAlignment.center,
+      spacing: 80,
+      runSpacing: 30,
       children: [
         ProviderModelInfoProfile(),
         ProviderModelInfoProfile(
-            title: "Share Media",
+            title: AppStrings.shareMedia,
             body:
-                "Share your favourite images, video or any link you feel like sharing with your connections or community. ",
-            icon: Icon(Icons.insert_link)),
+            AppStrings.shareYourFavourite,
+            icon: const Icon(Icons.insert_link)),
         ProviderModelInfoProfile(
-            title: "Multiple Profile",
-            body: "You can choose to make multiple profiles for your accounts.",
-            icon: Icon(Icons.personal_injury_outlined)),
+            title: AppStrings.multipleProfile,
+            body: AppStrings.youCanChoose,
+            icon: const Icon(Icons.personal_injury_outlined)),
       ],
     );
   }

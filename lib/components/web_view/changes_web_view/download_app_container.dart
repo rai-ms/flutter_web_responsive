@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
+
+import '../../image_path/app_image_path_container.dart';
+import '../../login_page_component/backgrounds/download_our_app_background.dart';
 
 class DownloadAppContainerWebView extends StatelessWidget {
   const DownloadAppContainerWebView({super.key});
@@ -7,42 +11,55 @@ class DownloadAppContainerWebView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    return Container(
-      color: Color.fromARGB(215, 3, 71, 197),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Flexible(
-            child: Container(
-              margin: EdgeInsets.only(left: 120),
-              width: 400,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
+    return Stack(
+      children: [
+
+        // Contents of the download_app_web_view container
+        Column(
+          children: [
+            Container(
+              color: const Color.fromARGB(215, 3, 71, 197),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "Download our App from",
-                    style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w900,
-                        color: Colors.white),
+                  Flexible(
+                    child: Container(
+                      margin: const EdgeInsets.only(left: 120),
+                      width: 400,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            AppStrings.downloadOurApp,
+                            style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.w900,
+                                color: Colors.white),
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          Image.asset(AppImage.appDownload),
+                        ],
+                      ),
+                    ),
                   ),
-                  SizedBox(
-                    height: 30,
+                  Flexible(
+                    child: SizedBox(
+                        width: 500,
+                        child: Image.asset(AppImage.personDownload)),
                   ),
-                  Image.asset("assets/images/app_download.png"),
                 ],
               ),
             ),
-          ),
-          Flexible(
-            child: SizedBox(
-                width: 500,
-                child: Image.asset("assets/images/person_download.png")),
-          ),
-        ],
-      ),
+          ],
+        ),
+
+        // Background of the download_app_web_view container
+        const BackgroundDownloadOurApp(),
+      ],
     );
   }
 }

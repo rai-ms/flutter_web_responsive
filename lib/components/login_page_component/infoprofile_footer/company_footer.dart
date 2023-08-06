@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
 class CompanyFooter extends StatelessWidget {
   const CompanyFooter({super.key});
@@ -11,7 +12,7 @@ class CompanyFooter extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Company",
+         AppStrings.companyFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
@@ -19,7 +20,7 @@ class CompanyFooter extends StatelessWidget {
           height: 10,
         ),
         Text(
-          "About Us",
+          AppStrings.aboutFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
         ),
@@ -27,7 +28,7 @@ class CompanyFooter extends StatelessWidget {
           height: 5,
         ),
         Text(
-          "Contact Us",
+          AppStrings.contactFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
         ),

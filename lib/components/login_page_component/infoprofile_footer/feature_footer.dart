@@ -1,16 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
 class FeatureFooter extends StatelessWidget {
   const FeatureFooter({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Feature",
+          AppStrings.featureHeadingFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
@@ -18,7 +19,7 @@ class FeatureFooter extends StatelessWidget {
           height: 10,
         ),
         Text(
-          "View Feeds",
+          AppStrings.viewFeedsFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
         ),
@@ -26,7 +27,7 @@ class FeatureFooter extends StatelessWidget {
           height: 5,
         ),
         Text(
-          "Make Connections",
+          AppStrings.makeConnectionFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
         ),
@@ -34,7 +35,7 @@ class FeatureFooter extends StatelessWidget {
           height: 5,
         ),
         Text(
-          "Create Visiting Cards",
+          AppStrings.createVisitingCardFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
         ),
@@ -42,7 +43,7 @@ class FeatureFooter extends StatelessWidget {
           height: 5,
         ),
         Text(
-          "Create Different Profile Pages",
+          AppStrings.createDifferentProfileFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
         ),

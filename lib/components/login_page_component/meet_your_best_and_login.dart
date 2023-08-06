@@ -14,11 +14,11 @@ class ContainerMeetYourBestLogin extends StatelessWidget {
     return SizedBox(
       child: Column(
         children: [
-          MeetYourBestText(),
+          const MeetYourBestText(),
           LoginContainer(),
           // App Availability
-          Padding(
-            padding: const EdgeInsets.only(top: 20.0),
+          const Padding(
+            padding: EdgeInsets.only(top: 20.0),
             child: AppAvailableOn(),
           ),
         ],

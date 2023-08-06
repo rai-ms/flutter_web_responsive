@@ -1,16 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
 class LinkFooter extends StatelessWidget {
   const LinkFooter({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Links",
+          AppStrings.linksFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
@@ -18,7 +19,7 @@ class LinkFooter extends StatelessWidget {
           height: 10,
         ),
         Text(
-          "Privacy Policy",
+          AppStrings.privacyPolicyFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
         ),
@@ -26,7 +27,7 @@ class LinkFooter extends StatelessWidget {
           height: 5,
         ),
         Text(
-          "Terms & Conditions",
+          AppStrings.termsConditionsFooter,
           style: TextStyle(
               color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
         ),

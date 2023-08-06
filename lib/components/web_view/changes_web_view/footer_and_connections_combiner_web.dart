@@ -8,16 +8,14 @@ class CombineFooterAndConnectionsWebView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          MakeConnectionWebView(),
-          SizedBox(
-            height: 100,
-          ),
-          InfoProfileFooterResponsiveView(),
-        ],
-      ),
+    return const Column(
+      children: [
+        MakeConnectionWebView(),
+        SizedBox(
+          height: 100,
+        ),
+        InfoProfileFooterResponsiveView(),
+      ],
     );
   }
 }

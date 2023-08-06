@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
+import '../../colors/colors.dart';
 import 'dont_have_account.dart';
 import 'login_button.dart';
 import 'login_using_another_account.dart';
@@ -13,11 +15,11 @@ class LoginContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(
+      constraints: const BoxConstraints(
         maxWidth: 470,
       ),
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.only(left: 15, top: 20, right: 15, bottom: 10),
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.only(left: 15, top: 20, right: 15, bottom: 10),
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(color: Colors.black.withOpacity(.6), blurRadius: 10)
@@ -27,35 +29,38 @@ class LoginContainer extends StatelessWidget {
         //   blurRadius: 10.0,
         // ),],
         color: Colors.white,
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(20),
         ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Log In",
+          const Text(
+            AppStrings.login,
             style: TextStyle(
-                fontSize: 35, fontWeight: FontWeight.w800, color: Colors.blue),
+                fontSize: 35,
+                fontWeight: FontWeight.w800,
+                color: AppColors.backgroundThemeColor),
           ),
-          Text(
-            "Enter username/email and password to login or use social media accounts to login into the application.",
+          const Text(
+            AppStrings.enterUsername,
             style: TextStyle(
+              color: AppColors.blurTextColor,
               fontSize: 13,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           TextFormField(
             decoration: InputDecoration(
               filled: true,
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.email_outlined,
-                color: Colors.blue,
+                color: AppColors.backgroundThemeColor,
               ),
-              hintText: "Username/Email",
+              hintText: AppStrings.usernameEmail,
               fillColor: Colors.white,
               enabledBorder: OutlineInputBorder(
                 borderSide: const BorderSide(
@@ -72,7 +77,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           TextFormField(
@@ -80,15 +85,15 @@ class LoginContainer extends StatelessWidget {
             decoration: InputDecoration(
               filled: true,
               fillColor: Colors.white,
-              prefixIcon: Icon(
+              prefixIcon: const Icon(
                 Icons.lock_outline,
-                color: Colors.blue,
+                color: AppColors.backgroundThemeColor,
               ),
-              suffixIcon: Icon(
+              suffixIcon: const Icon(
                 Icons.remove_red_eye_outlined,
-                color: Colors.blue,
+                color: AppColors.backgroundThemeColor,
               ),
-              hintText: "Password",
+              hintText: AppStrings.password,
               enabledBorder: OutlineInputBorder(
                 borderSide: const BorderSide(
                   color: Colors.black,
@@ -104,30 +109,30 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Text(
-                "Forget Password?",
+                AppStrings.forgetPassword,
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
             ],
           ),
-          LoginContainerButton(),
-          ContainerLoginOR(),
-          SizedBox(
+          const LoginContainerButton(),
+          const ContainerLoginOR(),
+          const SizedBox(
             height: 10,
           ),
-          LoginWithOTPText(),
-          SizedBox(
+          const LoginWithOTPText(),
+          const SizedBox(
             height: 10,
           ),
-          LoginUsingAccount(),
-          SizedBox(
+          const LoginUsingAccount(),
+          const SizedBox(
             height: 10,
           ),
-          DontHaveAccountText(),
-          SizedBox(
+          const DontHaveAccountText(),
+          const SizedBox(
             height: 10,
           ),
         ],

@@ -13,8 +13,8 @@ class BottomStackCombine extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          CombineFooterAndConnections(),
-          Positioned(bottom: (width > 1120)? 260 : (width >= 720)? 390 : 740, child: TryInfoProfile()),
+          const CombineFooterAndConnections(),
+          Positioned(bottom: (width > 1120)? 260 : (width >= 720)? 390 : 740, child: const TryInfoProfile()),
         ],
       ),
     );

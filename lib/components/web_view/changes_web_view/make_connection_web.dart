@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_web_assignment/components/image_path/app_image_path_container.dart';
 
 import '../../login_page_component/make_connection/make_connection.dart';
 
@@ -16,10 +17,10 @@ class MakeConnectionWebView extends StatelessWidget {
           Flexible(
             child: SizedBox(
                 height: 450,
-                child: Image.asset("assets/images/world_connection.png")),
+                child: Image.asset(AppImage.worldConnection)),
           ),
           Flexible(
-              child: SizedBox(width: width * .3, child: MakeConnectionText()))
+              child: SizedBox(width: width * .3, child: const MakeConnectionText()))
         ],
       ),
     );

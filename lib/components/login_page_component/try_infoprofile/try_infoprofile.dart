@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
+
+import '../../colors/colors.dart';
 
 class TryInfoProfile extends StatelessWidget {
   const TryInfoProfile({super.key});
@@ -18,11 +21,12 @@ class TryInfoProfile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Try InfoProfile for free",
+            AppStrings.tryInfoProfile,
             style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.w700,
-                color: Color.fromARGB(221, 23, 5, 185)),
+                color: AppColors.blueTextColor
+                ),
           ),
           RowColumnProviderTryInfoProfile()
         ],
@@ -70,7 +74,7 @@ class ColumnProviderTryInfoProfile extends StatelessWidget {
               width: 13,
             ),
             Text(
-              "Multiple Profiles",
+              AppStrings.multipleProfiles,
               style: TextStyle(fontSize: 14),
             )
           ],
@@ -83,7 +87,7 @@ class ColumnProviderTryInfoProfile extends StatelessWidget {
               width: 13,
             ),
             Text(
-              "Creative",
+              AppStrings.creative,
               style: TextStyle(fontSize: 14),
             )
           ],
@@ -96,7 +100,7 @@ class ColumnProviderTryInfoProfile extends StatelessWidget {
               width: 13,
             ),
             Text(
-              "Build Connections",
+              AppStrings.buildConnections,
               style: TextStyle(fontSize: 14),
             )
           ],
@@ -109,12 +113,12 @@ class ColumnProviderTryInfoProfile extends StatelessWidget {
               decoration:
                   BoxDecoration(borderRadius: BorderRadius.circular(15)),
               child: const Text(
-                "Log In",
+                AppStrings.login,
                 style: TextStyle(
                     fontSize: 25,
                     decoration: TextDecoration.underline,
-                    color: Colors.blue,
-                    decorationColor: Colors.blue),
+                    color: AppColors.backgroundThemeColor,
+                    decorationColor: AppColors.backgroundThemeColor),
               ),
             ),
             const SizedBox(
@@ -125,16 +129,17 @@ class ColumnProviderTryInfoProfile extends StatelessWidget {
               height: 50,
               width: 90,
               decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(15)),
+                  color: AppColors.backgroundThemeColor,
+                  borderRadius: BorderRadius.circular(15)),
               child: const Center(
                   child: Text(
-                "Sign Up",
+                AppStrings.signUp,
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w800,
                     decoration: TextDecoration.underline,
                     color: Colors.white,
-                    decorationColor: Colors.blue),
+                    decorationColor: AppColors.backgroundThemeColor),
               )),
             ),
           ],
@@ -152,42 +157,42 @@ class RowProviderTryInfoProfileOne extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
+        const Row(
           children: [
-            const Row(
+            Row(
               children: [
                 Icon(Icons.check),
                 SizedBox(
                   width: 13,
                 ),
                 Text(
-                  "Multiple Profiles",
+                  AppStrings.multipleProfiles,
                   style: TextStyle(fontSize: 14),
                 )
               ],
             ),
-            const SizedBox(width: 15),
-            const Row(
+            SizedBox(width: 15),
+            Row(
               children: [
                 Icon(Icons.check),
                 SizedBox(
                   width: 13,
                 ),
                 Text(
-                  "Creative",
+                  AppStrings.creative,
                   style: TextStyle(fontSize: 14),
                 )
               ],
             ),
-            const SizedBox(width: 15),
-            const Row(
+            SizedBox(width: 15),
+            Row(
               children: [
                 Icon(Icons.check),
                 SizedBox(
                   width: 13,
                 ),
                 Text(
-                  "Build Connections",
+                  AppStrings.buildConnections,
                   style: TextStyle(fontSize: 14),
                 )
               ],
@@ -202,12 +207,12 @@ class RowProviderTryInfoProfileOne extends StatelessWidget {
               decoration:
                   BoxDecoration(borderRadius: BorderRadius.circular(15)),
               child: const Text(
-                "Log In",
+                AppStrings.login,
                 style: TextStyle(
                     fontSize: 25,
                     decoration: TextDecoration.underline,
-                    color: Colors.blue,
-                    decorationColor: Colors.blue),
+                    color: AppColors.backgroundThemeColor,
+                    decorationColor: AppColors.backgroundThemeColor),
               ),
             ),
             const SizedBox(
@@ -218,16 +223,17 @@ class RowProviderTryInfoProfileOne extends StatelessWidget {
               height: 50,
               width: 90,
               decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(15)),
+                  color: AppColors.backgroundThemeColor,
+                  borderRadius: BorderRadius.circular(15)),
               child: const Center(
                   child: Text(
-                "Sign Up",
+                AppStrings.signUp,
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w800,
                     decoration: TextDecoration.underline,
                     color: Colors.white,
-                    decorationColor: Colors.blue),
+                    decorationColor: AppColors.backgroundThemeColor),
               )),
             ),
           ],
@@ -252,7 +258,7 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
               width: 13,
             ),
             Text(
-              "Multiple Profiles",
+              AppStrings.multipleProfiles,
               style: TextStyle(fontSize: 14),
             )
           ],
@@ -265,7 +271,7 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
               width: 13,
             ),
             Text(
-              "Creative",
+              AppStrings.creative,
               style: TextStyle(fontSize: 14),
             )
           ],
@@ -278,12 +284,14 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
               width: 13,
             ),
             Text(
-              "Build Connections",
+              AppStrings.buildConnections,
               style: TextStyle(fontSize: 14),
             )
           ],
         ),
-        SizedBox(width: width * .07,),
+        SizedBox(
+          width: width * .07,
+        ),
         Row(
           children: [
             Container(
@@ -292,12 +300,12 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
               decoration:
                   BoxDecoration(borderRadius: BorderRadius.circular(15)),
               child: const Text(
-                "Log In",
+                AppStrings.login,
                 style: TextStyle(
                     fontSize: 25,
                     decoration: TextDecoration.underline,
-                    color: Colors.blue,
-                    decorationColor: Colors.blue),
+                    color: AppColors.backgroundThemeColor,
+                    decorationColor: AppColors.backgroundThemeColor),
               ),
             ),
             const SizedBox(
@@ -308,16 +316,17 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
               height: 50,
               width: 90,
               decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(15)),
+                  color: AppColors.backgroundThemeColor,
+                  borderRadius: BorderRadius.circular(15)),
               child: const Center(
                   child: Text(
-                "Sign Up",
+                AppStrings.signUp,
                 style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w800,
                     decoration: TextDecoration.underline,
                     color: Colors.white,
-                    decorationColor: Colors.blue),
+                    decorationColor: AppColors.backgroundThemeColor),
               )),
             ),
           ],

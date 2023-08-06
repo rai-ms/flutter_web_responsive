@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/colors/colors.dart';
 import 'package:flutter_web_assignment/components/login_page_component/infoprofile_footer/row_footer_copyright.dart';
 
 import '../../login_page_component/infoprofile_footer/company_footer.dart';
@@ -40,15 +40,15 @@ class InfoProfileFooterBreakOne extends StatelessWidget {
           ),
           const InfoProfileLogoLink(),
           const FeatureFooter(),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           const LinkFooter(),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           const CompanyFooter(),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           const HelpSupportFooter(),
@@ -148,7 +148,7 @@ class InfoProfileFooterBreakThree extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Container(
-      color: Colors.blueAccent,
+      color: AppColors.backgroundThemeColor,
       width: width,
       padding: const EdgeInsets.only(left: 30, right: 30, top: 50),
       child: Column(

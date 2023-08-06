@@ -26,11 +26,18 @@ class CombineTopTwoItemsChangeWeb extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        NavBarLoginPage(),
-        ContainerMeetYourBestLoginWebChanges(),
-      ],
+    double width = MediaQuery.of(context).size.width;
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: width < 1000? 10: width / 30),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
+              width: MediaQuery.of(context).size.width - 30,
+              child: NavBarLoginPage()),
+          ContainerMeetYourBestLoginWebChanges(),
+        ],
+      ),
     );
   }
 }

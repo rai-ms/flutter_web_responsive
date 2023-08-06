@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
 class ContainerLoginOR extends StatelessWidget {
   const ContainerLoginOR({super.key});
@@ -10,17 +11,17 @@ class ContainerLoginOR extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          margin: EdgeInsets.only(right: 10),
+          margin: const EdgeInsets.only(right: 10),
           color: Colors.grey,
           width: 50,
           height: 1,
         ),
-        Text(
-          "OR",
+        const Text(
+          AppStrings.or,
           style: TextStyle(fontWeight: FontWeight.w700),
         ),
         Container(
-          margin: EdgeInsets.only(left: 10),
+          margin: const EdgeInsets.only(left: 10),
           color: Colors.grey,
           width: 50,
           height: 1,

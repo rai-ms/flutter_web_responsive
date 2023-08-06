@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_web_assignment/components/image_path/app_image_path_container.dart';
 
 class AppAvailableOn extends StatelessWidget {
   const AppAvailableOn({super.key});
@@ -14,17 +15,17 @@ class AppAvailableOn extends StatelessWidget {
             width: wdStores,
             height: 90,
             child: Image.asset(
-              "assets/images/store_image.png",
+              AppImage.storeImage,
               fit: BoxFit.fitWidth,
             )),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
         SizedBox(
             width: wdStores,
             height: 90,
             child: Image.asset(
-              "assets/images/google_play.png",
+              AppImage.googlePlay,
               fit: BoxFit.fitWidth,
             )),
       ],
