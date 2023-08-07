@@ -64,7 +64,7 @@ class _AllModelCombineProviderMobileAndTabletClickableState extends State<AllMod
 class ProviderModelInfoProfileOne extends StatelessWidget {
   ProviderModelInfoProfileOne({super.key,this.isTrue = false,});
 
-  Color color = Colors.transparent, iconBGColor =  Colors.lightBlueAccent;
+  Color color = Colors.transparent, iconBGColors =  Colors.lightBlueAccent;
   String title = AppStrings.visitingCard, body = AppStrings.shareYourVisiting;
   Icon icon = const Icon(Icons.account_balance_wallet);
   bool isTrue = false;
@@ -75,14 +75,14 @@ class ProviderModelInfoProfileOne extends StatelessWidget {
     if(isTrue)
       {
         color = AppColors.backgroundThemeColor;
-        iconBGColor =  Colors.lightBlueAccent;
+        iconBGColors =  AppColors.backgroundThemeColor3Fade;
         textColor = AppColors.whiteTextColor;
         bodyTextColor = AppColors.whiteTextColor;
       }
     else
       {
         color = AppColors.transparent;
-        iconBGColor =  AppColors.backgroundThemeColor;
+        iconBGColors =  AppColors.backgroundThemeColor;
         textColor = AppColors.blueTextColor;
         bodyTextColor = AppColors.blackTextColor;
       }
@@ -113,9 +113,9 @@ class ProviderModelInfoProfileOne extends StatelessWidget {
               height: 50,
               width: 50,
               decoration: BoxDecoration(
-                  color: Colors.blue.shade200,
+                  color: iconBGColors,
                   borderRadius: BorderRadius.circular(10)),
-              child: icon),
+              child: Icon(Icons.account_balance_wallet, color: Colors.white,)),
           const SizedBox(
             height: 10,
           ),
@@ -139,7 +139,7 @@ class ProviderModelInfoProfileOne extends StatelessWidget {
 
 class ProviderModelInfoProfileTwo extends StatelessWidget {
   ProviderModelInfoProfileTwo({super.key, this.isTrue = false,});
-  Color color = Colors.transparent, iconBGColor =  Colors.lightBlueAccent;
+  Color color = AppColors.transparent, iconBGColors =  Colors.lightBlueAccent;
   String title = AppStrings.shareMedia, body = AppStrings.shareYourFavourite;
   Icon icon = const Icon(Icons.link_outlined);
   bool isTrue = false;
@@ -149,14 +149,14 @@ class ProviderModelInfoProfileTwo extends StatelessWidget {
     if(isTrue)
     {
       color = AppColors.backgroundThemeColor;
-      iconBGColor =  Colors.lightBlueAccent;
+      iconBGColors =  AppColors.backgroundThemeColor3Fade;
       textColor = AppColors.whiteTextColor;
       bodyTextColor = AppColors.whiteTextColor;
     }
     else
     {
       color = AppColors.transparent;
-      iconBGColor =  AppColors.backgroundThemeColor;
+      iconBGColors =  AppColors.backgroundThemeColor;
       textColor = AppColors.blueTextColor;
       bodyTextColor = AppColors.blackTextColor;
     }
@@ -186,9 +186,9 @@ class ProviderModelInfoProfileTwo extends StatelessWidget {
               height: 50,
               width: 50,
               decoration: BoxDecoration(
-                  color: Colors.blue.shade200,
+                  color: iconBGColors,
                   borderRadius: BorderRadius.circular(10)),
-              child: icon),
+              child: Icon(Icons.link_outlined, color: Colors.white,)),
           const SizedBox(
             height: 10,
           ),
@@ -212,7 +212,7 @@ class ProviderModelInfoProfileTwo extends StatelessWidget {
 
 class ProviderModelInfoProfileThree extends StatelessWidget {
   ProviderModelInfoProfileThree({super.key, this.isTrue = false,});
-  Color color = Colors.transparent, iconBGColor =  Colors.lightBlueAccent;
+  Color color = Colors.transparent, iconBGColors =  Colors.lightBlueAccent;
   String title = AppStrings.multipleProfile, body = AppStrings.youCanChoose;
   Icon icon = const Icon(Icons.person);
   bool isTrue = false;
@@ -223,14 +223,14 @@ class ProviderModelInfoProfileThree extends StatelessWidget {
     if(isTrue)
     {
       color = AppColors.backgroundThemeColor;
-      iconBGColor =  Colors.lightBlueAccent;
+      iconBGColors =  AppColors.backgroundThemeColor3Fade;
       textColor = AppColors.whiteTextColor;
       bodyTextColor = AppColors.whiteTextColor;
     }
     else
     {
       color = AppColors.transparent;
-      iconBGColor =  AppColors.backgroundThemeColor;
+      iconBGColors =  AppColors.backgroundThemeColor;
       textColor = AppColors.blueTextColor;
       bodyTextColor = AppColors.blackTextColor;
     }
@@ -260,9 +260,9 @@ class ProviderModelInfoProfileThree extends StatelessWidget {
               height: 50,
               width: 50,
               decoration: BoxDecoration(
-                  color: Colors.blue.shade200,
+                  color: iconBGColors,
                   borderRadius: BorderRadius.circular(10)),
-              child: icon),
+              child: Icon(Icons.person, color: Colors.white,)),
           const SizedBox(
             height: 10,
           ),
