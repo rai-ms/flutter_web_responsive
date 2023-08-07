@@ -35,6 +35,7 @@ class DownloadAppContainerWebView extends StatelessWidget {
                             AppStrings.downloadOurApp,
                             style: TextStyle(
                                 fontSize: 25,
+                                fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w900,
                                 color: Colors.white),
                           ),

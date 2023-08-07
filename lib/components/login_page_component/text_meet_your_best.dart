@@ -15,9 +15,10 @@ class MeetYourBestText extends StatelessWidget {
         Text(
           AppStrings.meetYourBest,
           style: TextStyle(
+            fontFamily: 'Poppins',
               color: AppColors.blackTextColor,
               fontSize: (width > 415) ? 50 : 30,
-              fontWeight: (width > 415) ? FontWeight.w900 : FontWeight.w800),
+              fontWeight: (width > 415) ? FontWeight.w700 : FontWeight.w800),
           textAlign: TextAlign.center,
         ),
         const Text(

@@ -14,6 +14,7 @@ class CompanyFooter extends StatelessWidget {
         Text(
          AppStrings.companyFooter,
           style: TextStyle(
+            fontFamily: 'Poppins',
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
         SizedBox(

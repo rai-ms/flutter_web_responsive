@@ -14,7 +14,7 @@ class ContainerMeetYourBestLoginWebChanges extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Padding(
       padding:
-          EdgeInsets.symmetric(horizontal: (width < 900) ? 30.0 : width * .05),
+          EdgeInsets.symmetric(horizontal: (width < 900) ? 30.0 : (width >= 950 && width <= 1025)? width*.01: width * .04),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

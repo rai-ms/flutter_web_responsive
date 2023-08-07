@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_assignment/components/login_page_component/infoprofile_provides/wrap_info_profile.dart';
 
+import '../../tablet_view/all_model_combine_provider.dart';
 import 'girdi_items_infoprofile_provide.dart';
 import 'infoprofile_heading.dart';
 
@@ -10,7 +11,8 @@ class InfoProfileProvide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    double width = MediaQuery.of(context).size.width;
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -21,7 +23,7 @@ class InfoProfileProvide extends StatelessWidget {
         SizedBox(
           height: 40,
         ),
-        WrapInfoProfileProvide(),
+        (width >= 950)? WrapInfoProfileProvide() : AllModelCombineProviderMobileAndTabletClickable(),
       ],
     );
   }

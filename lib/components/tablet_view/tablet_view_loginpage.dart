@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/colors/colors.dart';
 import '../login_page_component/combine_bottom_with_stack/combine_bottom_with_stack.dart';
 import '../login_page_component/download_app_container/download_app_container.dart';
 import '../login_page_component/infoprofile_provides/infoprofile_provide.dart';
@@ -16,7 +17,7 @@ class TabletViewLoginPage extends StatelessWidget {
         top: marginTop,
       ),
       child: Container(
-        color: const Color.fromARGB(136, 132, 178, 230),
+        color: AppColors.backgroundThemeColor2,
         width: size.width,
         child: const SingleChildScrollView(
           child: Column(

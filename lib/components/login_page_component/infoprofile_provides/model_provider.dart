@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
 import '../../colors/colors.dart';
 
@@ -10,9 +11,9 @@ class ProviderModelInfoProfile extends StatefulWidget {
   ProviderModelInfoProfile(
       {super.key,
       this.color = Colors.transparent,
-      this.title = "Visiting Cards",
+      this.title = AppStrings.visitingCard,
       this.body =
-          "Share your visiting cards with the best connections all around the country.",
+          AppStrings.shareYourVisiting,
       this.icon = const Icon(Icons.account_balance_wallet)});
 
   @override
@@ -74,6 +75,7 @@ class _ProviderModelInfoProfileState extends State<ProviderModelInfoProfile> {
             Text(
               widget.title,
               style: TextStyle(
+                  fontFamily: 'Poppins',
                   color: textColor,
                   fontSize: (width <= 450) ? 16 : 20,
                   fontWeight: FontWeight.w900),

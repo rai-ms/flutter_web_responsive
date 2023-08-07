@@ -13,6 +13,7 @@ class LinkFooter extends StatelessWidget {
         Text(
           AppStrings.linksFooter,
           style: TextStyle(
+              fontFamily: 'Poppins',
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
         SizedBox(

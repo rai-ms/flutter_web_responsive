@@ -10,7 +10,7 @@ class AppStrings
   static const String forgetPassword = "Forget Password?";
   static const String or = "OR";
   static const String loginWith = "Log In with OTP";
-  static const String dontHaveAccount = "Don't have an account?";
+  static const String dontHaveAccount = "Don't have an account? ";
   static const String signUp = "Sign Up";
   static const String infoprofile = "Infoprofile is designed for everyone.";
   static const String what = "What";

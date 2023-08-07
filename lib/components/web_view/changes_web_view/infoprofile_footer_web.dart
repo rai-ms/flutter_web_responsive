@@ -29,7 +29,7 @@ class InfoProfileFooterBreakOne extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Container(
-      color: Colors.blueAccent,
+      color: AppColors.backgroundThemeColor,
       width: width,
       padding: const EdgeInsets.only(left: 30, right: 30, top: 120),
       child: Column(
@@ -76,9 +76,9 @@ class InfoProfileFooterBreakTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Container(
-      color: Colors.blueAccent,
+      color: AppColors.backgroundThemeColor,
       width: width,
-      padding: const EdgeInsets.only(left: 30, right: 30, top: 120),
+      padding: const EdgeInsets.only(left: 28, right: 21, top: 120),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -117,6 +117,9 @@ class InfoProfileFooterBreakTwo extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CompanyFooter(),
+                      SizedBox(
+                        height: 30,
+                      ),
                       HelpSupportFooter(),
                     ],
                   ),

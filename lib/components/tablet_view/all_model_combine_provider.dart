@@ -1,40 +1,100 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
 import '../colors/colors.dart';
 
-class AllModelCombineProviderMobileAndTabletClickable extends StatelessWidget
-{
-  const AllModelCombineProviderMobileAndTabletClickable({super.key});
+class AllModelCombineProviderMobileAndTabletClickable extends StatefulWidget {
+  AllModelCombineProviderMobileAndTabletClickable({super.key});
+
+  @override
+  State<AllModelCombineProviderMobileAndTabletClickable> createState() => _AllModelCombineProviderMobileAndTabletClickableState();
+}
+
+class _AllModelCombineProviderMobileAndTabletClickableState extends State<AllModelCombineProviderMobileAndTabletClickable> {
+  List isBackgroundEnable = [false, false, false];
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Wrap(
+      spacing: 70,
+      runSpacing: 20,
+      children: [
+        InkWell(
+          onTap: () {
+            set_index(0);
+            setState(() {
+
+            });
+          },
+          child: ProviderModelInfoProfileOne(isTrue: isBackgroundEnable[0]),
+        ),
+        InkWell(onTap: () {set_index(1); setState(() {
+
+        });}, child: ProviderModelInfoProfileTwo(isTrue: isBackgroundEnable[1])),
+        InkWell(onTap: () {set_index(2); setState(() {
+
+        });}, child: ProviderModelInfoProfileThree(isTrue: isBackgroundEnable[2],)),
+      ],
+    );
   }
 
+  void set_index(int index) {
+    if (isBackgroundEnable[index] != true)
+    {
+      isBackgroundEnable[index] = true;
+      if(index == 0)
+        {
+          isBackgroundEnable[1] = false;
+          isBackgroundEnable[2] = false;
+        }
+      else if(index == 1)
+        {
+          isBackgroundEnable[0] = false;
+          isBackgroundEnable[2] = false;
+        }
+      else
+        {
+          isBackgroundEnable[0] = false;
+          isBackgroundEnable[1] = false;
+        }
+    }
+  }
 }
 
 class ProviderModelInfoProfileOne extends StatelessWidget {
-  Color color;
-  String title, body;
-  Icon icon;
-  Color textColor = AppColors.backgroundThemeColor,
-      iconColor = AppColors.backgroundThemeColor,
-      bodyTextColor = Colors.black,
-      iconBgColor = Colors.black;
-  ProviderModelInfoProfileOne(
-      {super.key,
-      this.color = Colors.transparent,
-      this.title = "Visiting Cards",
-      this.body =
-          "Share your visiting cards with the best connections all around the country.",
-      this.icon = const Icon(Icons.account_balance_wallet)});
+  ProviderModelInfoProfileOne({super.key,this.isTrue = false,});
+
+  Color color = Colors.transparent, iconBGColor =  Colors.lightBlueAccent;
+  String title = AppStrings.visitingCard, body = AppStrings.shareYourVisiting;
+  Icon icon = const Icon(Icons.account_balance_wallet);
+  bool isTrue = false;
+  Color textColor = AppColors.backgroundThemeColor,iconColor = AppColors.backgroundThemeColor,bodyTextColor = Colors.black,iconBgColor = Colors.black;
+
+  void setColor()
+  {
+    if(isTrue)
+      {
+        color = AppColors.backgroundThemeColor;
+        iconBGColor =  Colors.lightBlueAccent;
+        textColor = AppColors.whiteTextColor;
+        bodyTextColor = AppColors.whiteTextColor;
+      }
+    else
+      {
+        color = AppColors.transparent;
+        iconBGColor =  AppColors.backgroundThemeColor;
+        textColor = AppColors.blueTextColor;
+        bodyTextColor = AppColors.blackTextColor;
+      }
+  }
   @override
   Widget build(BuildContext context) {
+
     Size size = MediaQuery.of(context).size;
     double width = size.width;
     // double? containerHeight = (width <= 450)? 150: null;
     double? containerHeight = 100;
+    setColor();
     return Container(
       constraints: BoxConstraints(
         maxWidth: (width <= 450) ? 210 : 330,
@@ -78,22 +138,32 @@ class ProviderModelInfoProfileOne extends StatelessWidget {
 }
 
 class ProviderModelInfoProfileTwo extends StatelessWidget {
-  Color color;
-  String title, body;
-  Icon icon;
-  Color textColor = AppColors.backgroundThemeColor,
-      iconColor = AppColors.backgroundThemeColor,
-      bodyTextColor = Colors.black,
-      iconBgColor = Colors.black;
-  ProviderModelInfoProfileTwo(
-      {super.key,
-      this.color = Colors.transparent,
-      this.title = "Visiting Cards",
-      this.body =
-          "Share your visiting cards with the best connections all around the country.",
-      this.icon = const Icon(Icons.account_balance_wallet)});
+  ProviderModelInfoProfileTwo({super.key, this.isTrue = false,});
+  Color color = Colors.transparent, iconBGColor =  Colors.lightBlueAccent;
+  String title = AppStrings.shareMedia, body = AppStrings.shareYourFavourite;
+  Icon icon = const Icon(Icons.link_outlined);
+  bool isTrue = false;
+  Color textColor = AppColors.backgroundThemeColor,iconColor = AppColors.backgroundThemeColor,bodyTextColor = Colors.black,iconBgColor = Colors.black;
+  void setColor()
+  {
+    if(isTrue)
+    {
+      color = AppColors.backgroundThemeColor;
+      iconBGColor =  Colors.lightBlueAccent;
+      textColor = AppColors.whiteTextColor;
+      bodyTextColor = AppColors.whiteTextColor;
+    }
+    else
+    {
+      color = AppColors.transparent;
+      iconBGColor =  AppColors.backgroundThemeColor;
+      textColor = AppColors.blueTextColor;
+      bodyTextColor = AppColors.blackTextColor;
+    }
+  }
   @override
   Widget build(BuildContext context) {
+    setColor();
     Size size = MediaQuery.of(context).size;
     double width = size.width;
     // double? containerHeight = (width <= 450)? 150: null;
@@ -141,22 +211,33 @@ class ProviderModelInfoProfileTwo extends StatelessWidget {
 }
 
 class ProviderModelInfoProfileThree extends StatelessWidget {
-  Color color;
-  String title, body;
-  Icon icon;
-  Color textColor = AppColors.backgroundThemeColor,
-      iconColor = AppColors.backgroundThemeColor,
-      bodyTextColor = Colors.black,
-      iconBgColor = Colors.black;
-  ProviderModelInfoProfileThree(
-      {super.key,
-      this.color = Colors.transparent,
-      this.title = "Visiting Cards",
-      this.body =
-          "Share your visiting cards with the best connections all around the country.",
-      this.icon = const Icon(Icons.account_balance_wallet)});
+  ProviderModelInfoProfileThree({super.key, this.isTrue = false,});
+  Color color = Colors.transparent, iconBGColor =  Colors.lightBlueAccent;
+  String title = AppStrings.multipleProfile, body = AppStrings.youCanChoose;
+  Icon icon = const Icon(Icons.person);
+  bool isTrue = false;
+  Color textColor = AppColors.backgroundThemeColor,iconColor = AppColors.backgroundThemeColor,bodyTextColor = Colors.black,iconBgColor = Colors.black;
+
+  void setColor()
+  {
+    if(isTrue)
+    {
+      color = AppColors.backgroundThemeColor;
+      iconBGColor =  Colors.lightBlueAccent;
+      textColor = AppColors.whiteTextColor;
+      bodyTextColor = AppColors.whiteTextColor;
+    }
+    else
+    {
+      color = AppColors.transparent;
+      iconBGColor =  AppColors.backgroundThemeColor;
+      textColor = AppColors.blueTextColor;
+      bodyTextColor = AppColors.blackTextColor;
+    }
+  }
   @override
   Widget build(BuildContext context) {
+    setColor();
     Size size = MediaQuery.of(context).size;
     double width = size.width;
     // double? containerHeight = (width <= 450)? 150: null;
@@ -202,4 +283,3 @@ class ProviderModelInfoProfileThree extends StatelessWidget {
     );
   }
 }
-

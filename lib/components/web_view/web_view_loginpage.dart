@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/colors/colors.dart';
 import 'package:flutter_web_assignment/components/web_view/changes_web_view/combine_bottom_with_stack_web.dart';
 import 'package:flutter_web_assignment/components/web_view/changes_web_view/combine_top_change.dart';
 import 'package:flutter_web_assignment/components/web_view/changes_web_view/download_app_container.dart';
@@ -18,7 +19,7 @@ class WebViewLoginPage extends StatelessWidget {
         top: marginTop,
       ),
       child: Container(
-        color: Color.fromARGB(136, 132, 178, 230),
+        color: AppColors.backgroundThemeColor2,
         width: size.width,
         child: const SingleChildScrollView(
           child: Column(

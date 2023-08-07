@@ -19,6 +19,7 @@ class LoginContainerButton extends StatelessWidget {
             child: Text(
               AppStrings.login,
               style: TextStyle(
+                fontFamily: 'Poppins',
                 fontWeight: FontWeight.w900,
               ),
             ),

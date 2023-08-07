@@ -12,7 +12,7 @@ class RowfooterCopyRight extends StatelessWidget {
       children: [
         Text(
           AppStrings.copyRightInfoProfile,
-          style: TextStyle(color: Colors.white, fontSize:  12),
+          style: TextStyle(color: Colors.white, fontSize:  12, fontFamily: 'Poppins'),
         ),
         Text(
           AppStrings.allRightsReserved,

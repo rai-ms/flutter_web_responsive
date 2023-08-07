@@ -37,8 +37,10 @@ class DownloadAppContainer extends StatelessWidget {
                     children: [
                       const Text(
                         AppStrings.downloadOurApp,
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 30,
+                            fontFamily: 'Poppins',
                             fontWeight: FontWeight.w900,
                             color: Colors.white),
                       ),

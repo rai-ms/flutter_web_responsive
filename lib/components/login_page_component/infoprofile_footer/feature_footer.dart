@@ -13,6 +13,7 @@ class FeatureFooter extends StatelessWidget {
         Text(
           AppStrings.featureHeadingFooter,
           style: TextStyle(
+            fontFamily: 'Poppins',
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
         ),
         SizedBox(

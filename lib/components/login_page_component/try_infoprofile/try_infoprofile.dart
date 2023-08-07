@@ -23,6 +23,7 @@ class TryInfoProfile extends StatelessWidget {
           Text(
             AppStrings.tryInfoProfile,
             style: TextStyle(
+              fontFamily: 'Poppins',
                 fontSize: 30,
                 fontWeight: FontWeight.w700,
                 color: AppColors.blueTextColor
