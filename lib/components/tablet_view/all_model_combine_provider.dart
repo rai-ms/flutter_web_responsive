@@ -4,7 +4,7 @@ import 'package:flutter_web_assignment/components/strings/string_web_assignment.
 import '../colors/colors.dart';
 
 class AllModelCombineProviderMobileAndTabletClickable extends StatefulWidget {
-  AllModelCombineProviderMobileAndTabletClickable({super.key});
+  const AllModelCombineProviderMobileAndTabletClickable({super.key});
 
   @override
   State<AllModelCombineProviderMobileAndTabletClickable> createState() => _AllModelCombineProviderMobileAndTabletClickableState();
