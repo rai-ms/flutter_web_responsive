@@ -32,7 +32,7 @@ class AppStrings
   static const String hereWeProduce = "Here we produce unusual ideas, reflecting the originality of the GitHub Community SRM. We build a transformative experience for our members in the creative field dealing with UI/UX, VFX/GFX, Content Writing and Photography elements.";
   static const String downloadOurApp = "Download our App from";
   static const String makeFriendsByBuilding = "Make friends by Building connections that are relevant to you.";
-  static const String theBestDomain = "The best domain for a real-time experience of the corporate world . Improving your communication and time management skills is the main prospect. PR, Sponsorship, Social media handling , Treasury, and Marketing are elements of this domain.";
+  static const String theBestDomain = "The best domain for a real-time experience of the corporate world. Improving your communication and time management skills is the main prospect. PR, Sponsorship, Social media handling, Treasury and Marketing are elements of this domain.";
   static const String copyRightInfoProfile = "Copyright InfoprofileLTD";
   static const String allRightsReserved = "All rights reserved";
   static const String notANormal = "Not a  normal app, its unique!";

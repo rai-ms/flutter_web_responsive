@@ -85,7 +85,7 @@ class MultipleProfileRow2WebView extends StatelessWidget {
                   style: TextStyle(fontSize: 20, color: Colors.black),
                 ),
                 TextSpan(
-                  text: "\n\n+${AppStrings.hereWeProduce}",
+                  text: "\n\n${AppStrings.hereWeProduce}",
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.normal,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/image_path/app_image_path_container.dart';
 import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
 import '../colors/colors.dart';
@@ -115,7 +116,11 @@ class ProviderModelInfoProfileOne extends StatelessWidget {
               decoration: BoxDecoration(
                   color: iconBGColors,
                   borderRadius: BorderRadius.circular(10)),
-              child: Icon(Icons.account_balance_wallet, color: Colors.white,)),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Image.asset(AppImage.iconcard,),
+              ),
+              ),
           const SizedBox(
             height: 10,
           ),
@@ -188,7 +193,11 @@ class ProviderModelInfoProfileTwo extends StatelessWidget {
               decoration: BoxDecoration(
                   color: iconBGColors,
                   borderRadius: BorderRadius.circular(10)),
-              child: Icon(Icons.link_outlined, color: Colors.white,)),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Image.asset(AppImage.linkicon,),
+              ),
+              ),
           const SizedBox(
             height: 10,
           ),
@@ -262,7 +271,10 @@ class ProviderModelInfoProfileThree extends StatelessWidget {
               decoration: BoxDecoration(
                   color: iconBGColors,
                   borderRadius: BorderRadius.circular(10)),
-              child: Icon(Icons.person, color: Colors.white,)),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Image.asset(AppImage.personIcon,),
+              ),),
           const SizedBox(
             height: 10,
           ),
