@@ -11,8 +11,7 @@ class InfoProfileLogoLink extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
-            width: 200, child: Image.asset(AppImage.appLogo)),
+        SizedBox(width: 200, child: Image.asset(AppImage.appLogo)),
         const Text(
           AppStrings.notANormal,
           style: TextStyle(color: Colors.white, fontSize: 14),

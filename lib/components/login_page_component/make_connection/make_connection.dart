@@ -32,8 +32,7 @@ class MakeConnectionText extends StatelessWidget {
           AppStrings.makeFriendsByBuilding,
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
         ),
-        Text(
-            AppStrings.theBestDomain,
+        Text(AppStrings.theBestDomain,
             style: TextStyle(fontSize: 17, color: Colors.black)),
         SizedBox(
           height: 60,

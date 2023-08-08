@@ -12,10 +12,12 @@ class CompanyFooter extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-         AppStrings.companyFooter,
+          AppStrings.companyFooter,
           style: TextStyle(
-            fontFamily: 'Poppins',
-              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              fontFamily: 'Poppins',
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold),
         ),
         SizedBox(
           height: 10,

@@ -3,7 +3,6 @@ import 'package:flutter_web_assignment/components/image_path/app_image_path_cont
 
 /// BackgroundDownloadOurApp is the stateless class, used to add the overlay on the download_our_app container , Its is used as overlay because the color of the image files, if it add in background, it won't be appear
 class BackgroundDownloadOurApp extends StatelessWidget {
-
   /// BackgroundDownloadOurApp is the stateless class, used to add the overlay on the download_our_app container , Its is used as overlay because the color of the image files, if it add in background, it won't be appear
   const BackgroundDownloadOurApp({super.key});
 
@@ -18,9 +17,13 @@ class BackgroundDownloadOurApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Flexible(child: SizedBox(
-                width: 180,
-                child: Image.asset(AppImage.circleBg, fit: BoxFit.fitWidth,))),
+            Flexible(
+                child: SizedBox(
+                    width: 180,
+                    child: Image.asset(
+                      AppImage.circleBg,
+                      fit: BoxFit.fitWidth,
+                    ))),
             const Flexible(child: SizedBox()),
           ],
         ),
@@ -30,9 +33,13 @@ class BackgroundDownloadOurApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             const Flexible(child: SizedBox()),
-            Flexible(child: SizedBox(
-                width: 180,
-                child: Image.asset(AppImage.rightCircleBg, fit: BoxFit.fitWidth,))),
+            Flexible(
+                child: SizedBox(
+                    width: 180,
+                    child: Image.asset(
+                      AppImage.rightCircleBg,
+                      fit: BoxFit.fitWidth,
+                    ))),
           ],
         ),
       ],
@@ -40,19 +47,17 @@ class BackgroundDownloadOurApp extends StatelessWidget {
   }
 
   /// Width is used to increase the distance between two background rows of download our app container, when hits with different break points
-  double boxWidth(double width)
-  {
-    if(width > 920 && width < 951)
-      {
-        return 210;
-      }
-    if(width > 950 && width <= 960) {
+  double boxWidth(double width) {
+    if (width > 920 && width < 951) {
+      return 210;
+    }
+    if (width > 950 && width <= 960) {
       return 0;
-    } else if(width > 920) {
+    } else if (width > 920) {
       return 0;
-    } else if(width <= 365) {
-      return (365/width)*250;
-    } else if(width <= 450) {
+    } else if (width <= 365) {
+      return (365 / width) * 250;
+    } else if (width <= 450) {
       return 180;
     }
     return 190;

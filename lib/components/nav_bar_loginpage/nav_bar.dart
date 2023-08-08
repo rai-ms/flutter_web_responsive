@@ -8,9 +8,11 @@ class NavBarLoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Padding(
-      padding: EdgeInsets.only(left: (width > 950)? 50.0: 0, top: 20),
+      padding: EdgeInsets.only(left: (width > 950) ? 50.0 : 0, top: 20),
       child: Row(
-        mainAxisAlignment:(width < 950)? MainAxisAlignment.center : MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: (width < 950)
+            ? MainAxisAlignment.center
+            : MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
               height: 60,

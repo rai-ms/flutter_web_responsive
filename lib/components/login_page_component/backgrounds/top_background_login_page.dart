@@ -29,9 +29,7 @@ class TopBackgroundLoginPage extends StatelessWidget {
                       child: Image.asset(
                         AppImage.rightCard,
                         alignment: Alignment.bottomRight,
-                      )
-                  )
-              ),
+                      ))),
             ],
           ),
         ],

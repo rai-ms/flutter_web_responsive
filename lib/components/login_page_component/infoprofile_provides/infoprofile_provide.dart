@@ -23,7 +23,9 @@ class InfoProfileProvide extends StatelessWidget {
         SizedBox(
           height: 40,
         ),
-        (width >= 950)? WrapInfoProfileProvide() : AllModelCombineProviderMobileAndTabletClickable(),
+        (width >= 950)
+            ? WrapInfoProfileProvide()
+            : AllModelCombineProviderMobileAndTabletClickable(),
       ],
     );
   }

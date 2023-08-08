@@ -8,10 +8,12 @@ class AllModelCombineProviderMobileAndTabletClickable extends StatefulWidget {
   const AllModelCombineProviderMobileAndTabletClickable({super.key});
 
   @override
-  State<AllModelCombineProviderMobileAndTabletClickable> createState() => _AllModelCombineProviderMobileAndTabletClickableState();
+  State<AllModelCombineProviderMobileAndTabletClickable> createState() =>
+      _AllModelCombineProviderMobileAndTabletClickableState();
 }
 
-class _AllModelCombineProviderMobileAndTabletClickableState extends State<AllModelCombineProviderMobileAndTabletClickable> {
+class _AllModelCombineProviderMobileAndTabletClickableState
+    extends State<AllModelCombineProviderMobileAndTabletClickable> {
   List isBackgroundEnable = [false, false, false];
 
   @override
@@ -23,74 +25,76 @@ class _AllModelCombineProviderMobileAndTabletClickableState extends State<AllMod
         InkWell(
           onTap: () {
             set_index(0);
-            setState(() {
-
-            });
+            setState(() {});
           },
           child: ProviderModelInfoProfileOne(isTrue: isBackgroundEnable[0]),
         ),
-        InkWell(onTap: () {set_index(1); setState(() {
-
-        });}, child: ProviderModelInfoProfileTwo(isTrue: isBackgroundEnable[1])),
-        InkWell(onTap: () {set_index(2); setState(() {
-
-        });}, child: ProviderModelInfoProfileThree(isTrue: isBackgroundEnable[2],)),
+        InkWell(
+            onTap: () {
+              set_index(1);
+              setState(() {});
+            },
+            child: ProviderModelInfoProfileTwo(isTrue: isBackgroundEnable[1])),
+        InkWell(
+            onTap: () {
+              set_index(2);
+              setState(() {});
+            },
+            child: ProviderModelInfoProfileThree(
+              isTrue: isBackgroundEnable[2],
+            )),
       ],
     );
   }
 
   void set_index(int index) {
-    if (isBackgroundEnable[index] != true)
-    {
+    if (isBackgroundEnable[index] != true) {
       isBackgroundEnable[index] = true;
-      if(index == 0)
-        {
-          isBackgroundEnable[1] = false;
-          isBackgroundEnable[2] = false;
-        }
-      else if(index == 1)
-        {
-          isBackgroundEnable[0] = false;
-          isBackgroundEnable[2] = false;
-        }
-      else
-        {
-          isBackgroundEnable[0] = false;
-          isBackgroundEnable[1] = false;
-        }
+      if (index == 0) {
+        isBackgroundEnable[1] = false;
+        isBackgroundEnable[2] = false;
+      } else if (index == 1) {
+        isBackgroundEnable[0] = false;
+        isBackgroundEnable[2] = false;
+      } else {
+        isBackgroundEnable[0] = false;
+        isBackgroundEnable[1] = false;
+      }
     }
   }
 }
 
 class ProviderModelInfoProfileOne extends StatelessWidget {
-  ProviderModelInfoProfileOne({super.key,this.isTrue = false,});
+  ProviderModelInfoProfileOne({
+    super.key,
+    this.isTrue = false,
+  });
 
-  Color color = Colors.transparent, iconBGColors =  Colors.lightBlueAccent;
+  Color color = Colors.transparent, iconBGColors = Colors.lightBlueAccent;
   String title = AppStrings.visitingCard, body = AppStrings.shareYourVisiting;
   Icon icon = const Icon(Icons.account_balance_wallet);
   bool isTrue = false;
-  Color textColor = AppColors.backgroundThemeColor,iconColor = AppColors.backgroundThemeColor,bodyTextColor = Colors.black,iconBgColor = Colors.black;
+  Color textColor = AppColors.backgroundThemeColor,
+      iconColor = AppColors.backgroundThemeColor,
+      bodyTextColor = Colors.black,
+      iconBgColor = Colors.black;
 
-  void setColor()
-  {
-    if(isTrue)
-      {
-        color = AppColors.backgroundThemeColor;
-        iconBGColors =  AppColors.backgroundThemeColor3Fade;
-        textColor = AppColors.whiteTextColor;
-        bodyTextColor = AppColors.whiteTextColor;
-      }
-    else
-      {
-        color = AppColors.transparent;
-        iconBGColors =  AppColors.backgroundThemeColor;
-        textColor = AppColors.blueTextColor;
-        bodyTextColor = AppColors.blackTextColor;
-      }
+  void setColor() {
+    if (isTrue) {
+      color = AppColors.backgroundThemeColor;
+      iconBGColors = AppColors.backgroundThemeColor3Fade;
+      textColor = AppColors.whiteTextColor;
+      bodyTextColor = AppColors.whiteTextColor;
+    } else {
+      color = AppColors.transparent;
+      iconBGColors = AppColors.backgroundThemeColor;
+      textColor = AppColors.blueTextColor;
+      bodyTextColor = AppColors.blackTextColor;
+    }
   }
+
   @override
   Widget build(BuildContext context) {
-
     Size size = MediaQuery.of(context).size;
     double width = size.width;
     // double? containerHeight = (width <= 450)? 150: null;
@@ -111,16 +115,17 @@ class ProviderModelInfoProfileOne extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                  color: iconBGColors,
-                  borderRadius: BorderRadius.circular(10)),
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Image.asset(AppImage.iconcard,),
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+                color: iconBGColors, borderRadius: BorderRadius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Image.asset(
+                AppImage.iconcard,
               ),
-              ),
+            ),
+          ),
           const SizedBox(
             height: 10,
           ),
@@ -143,29 +148,32 @@ class ProviderModelInfoProfileOne extends StatelessWidget {
 }
 
 class ProviderModelInfoProfileTwo extends StatelessWidget {
-  ProviderModelInfoProfileTwo({super.key, this.isTrue = false,});
-  Color color = AppColors.transparent, iconBGColors =  Colors.lightBlueAccent;
+  ProviderModelInfoProfileTwo({
+    super.key,
+    this.isTrue = false,
+  });
+  Color color = AppColors.transparent, iconBGColors = Colors.lightBlueAccent;
   String title = AppStrings.shareMedia, body = AppStrings.shareYourFavourite;
   Icon icon = const Icon(Icons.link_outlined);
   bool isTrue = false;
-  Color textColor = AppColors.backgroundThemeColor,iconColor = AppColors.backgroundThemeColor,bodyTextColor = Colors.black,iconBgColor = Colors.black;
-  void setColor()
-  {
-    if(isTrue)
-    {
+  Color textColor = AppColors.backgroundThemeColor,
+      iconColor = AppColors.backgroundThemeColor,
+      bodyTextColor = Colors.black,
+      iconBgColor = Colors.black;
+  void setColor() {
+    if (isTrue) {
       color = AppColors.backgroundThemeColor;
-      iconBGColors =  AppColors.backgroundThemeColor3Fade;
+      iconBGColors = AppColors.backgroundThemeColor3Fade;
       textColor = AppColors.whiteTextColor;
       bodyTextColor = AppColors.whiteTextColor;
-    }
-    else
-    {
+    } else {
       color = AppColors.transparent;
-      iconBGColors =  AppColors.backgroundThemeColor;
+      iconBGColors = AppColors.backgroundThemeColor;
       textColor = AppColors.blueTextColor;
       bodyTextColor = AppColors.blackTextColor;
     }
   }
+
   @override
   Widget build(BuildContext context) {
     setColor();
@@ -188,16 +196,17 @@ class ProviderModelInfoProfileTwo extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                  color: iconBGColors,
-                  borderRadius: BorderRadius.circular(10)),
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Image.asset(AppImage.linkicon,),
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+                color: iconBGColors, borderRadius: BorderRadius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Image.asset(
+                AppImage.linkicon,
               ),
-              ),
+            ),
+          ),
           const SizedBox(
             height: 10,
           ),
@@ -220,30 +229,33 @@ class ProviderModelInfoProfileTwo extends StatelessWidget {
 }
 
 class ProviderModelInfoProfileThree extends StatelessWidget {
-  ProviderModelInfoProfileThree({super.key, this.isTrue = false,});
-  Color color = Colors.transparent, iconBGColors =  Colors.lightBlueAccent;
+  ProviderModelInfoProfileThree({
+    super.key,
+    this.isTrue = false,
+  });
+  Color color = Colors.transparent, iconBGColors = Colors.lightBlueAccent;
   String title = AppStrings.multipleProfile, body = AppStrings.youCanChoose;
   Icon icon = const Icon(Icons.person);
   bool isTrue = false;
-  Color textColor = AppColors.backgroundThemeColor,iconColor = AppColors.backgroundThemeColor,bodyTextColor = Colors.black,iconBgColor = Colors.black;
+  Color textColor = AppColors.backgroundThemeColor,
+      iconColor = AppColors.backgroundThemeColor,
+      bodyTextColor = Colors.black,
+      iconBgColor = Colors.black;
 
-  void setColor()
-  {
-    if(isTrue)
-    {
+  void setColor() {
+    if (isTrue) {
       color = AppColors.backgroundThemeColor;
-      iconBGColors =  AppColors.backgroundThemeColor3Fade;
+      iconBGColors = AppColors.backgroundThemeColor3Fade;
       textColor = AppColors.whiteTextColor;
       bodyTextColor = AppColors.whiteTextColor;
-    }
-    else
-    {
+    } else {
       color = AppColors.transparent;
-      iconBGColors =  AppColors.backgroundThemeColor;
+      iconBGColors = AppColors.backgroundThemeColor;
       textColor = AppColors.blueTextColor;
       bodyTextColor = AppColors.blackTextColor;
     }
   }
+
   @override
   Widget build(BuildContext context) {
     setColor();
@@ -266,15 +278,17 @@ class ProviderModelInfoProfileThree extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                  color: iconBGColors,
-                  borderRadius: BorderRadius.circular(10)),
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Image.asset(AppImage.personIcon,),
-              ),),
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+                color: iconBGColors, borderRadius: BorderRadius.circular(10)),
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Image.asset(
+                AppImage.personIcon,
+              ),
+            ),
+          ),
           const SizedBox(
             height: 10,
           ),

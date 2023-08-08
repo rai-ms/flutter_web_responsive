@@ -8,6 +8,5 @@ class AppColors {
   static const Color blackTextColor = Color.fromRGBO(57, 59, 61, 1);
   static const Color whiteTextColor = Colors.white;
   static const Color transparent = Colors.transparent;
-  static const Color backgroundThemeColor3Fade= Color(0xFF073DC6);
-
+  static const Color backgroundThemeColor3Fade = Color(0xFF073DC6);
 }

@@ -9,10 +9,7 @@ class WrapInfoProfileProvide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery
-        .of(context)
-        .size
-        .width;
+    double width = MediaQuery.of(context).size.width;
     return Wrap(
       crossAxisAlignment: WrapCrossAlignment.center,
       spacing: 80,
@@ -21,8 +18,7 @@ class WrapInfoProfileProvide extends StatelessWidget {
         ProviderModelInfoProfile(),
         ProviderModelInfoProfile(
             title: AppStrings.shareMedia,
-            body:
-            AppStrings.shareYourFavourite,
+            body: AppStrings.shareYourFavourite,
             icon: const Icon(Icons.insert_link)),
         ProviderModelInfoProfile(
             title: AppStrings.multipleProfile,

@@ -15,7 +15,7 @@ class MeetYourBestText extends StatelessWidget {
         Text(
           AppStrings.meetYourBest,
           style: TextStyle(
-            fontFamily: 'Poppins',
+              fontFamily: 'Poppins',
               color: AppColors.blackTextColor,
               fontSize: (width > 415) ? 50 : 30,
               fontWeight: (width > 415) ? FontWeight.w700 : FontWeight.w800),
@@ -24,7 +24,9 @@ class MeetYourBestText extends StatelessWidget {
         const Text(
           AppStrings.connections,
           style: TextStyle(
-              fontSize: 30, fontWeight: FontWeight.w800, color: AppColors.backgroundThemeColor),
+              fontSize: 30,
+              fontWeight: FontWeight.w800,
+              color: AppColors.backgroundThemeColor),
         ),
         const Text(AppStrings.buildFast,
             style: TextStyle(

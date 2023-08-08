@@ -12,8 +12,7 @@ class ProviderModelInfoProfile extends StatefulWidget {
       {super.key,
       this.color = Colors.transparent,
       this.title = AppStrings.visitingCard,
-      this.body =
-          AppStrings.shareYourVisiting,
+      this.body = AppStrings.shareYourVisiting,
       this.icon = const Icon(Icons.account_balance_wallet)});
 
   @override

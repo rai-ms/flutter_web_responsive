@@ -11,9 +11,10 @@ class BackgroundMultipleProfile extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Flexible(child: SizedBox(
-                height: 400,
-                child: Image.asset(AppImage.backgroundMultipleProfile))),
+            Flexible(
+                child: SizedBox(
+                    height: 400,
+                    child: Image.asset(AppImage.backgroundMultipleProfile))),
             const Flexible(child: SizedBox()),
           ],
         ),
@@ -21,9 +22,9 @@ class BackgroundMultipleProfile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Flexible(child: SizedBox()),
-            Flexible(child: SizedBox(
-                height: 400,
-                child: Image.asset(AppImage.middleRightCard))),
+            Flexible(
+                child: SizedBox(
+                    height: 400, child: Image.asset(AppImage.middleRightCard))),
           ],
         ),
       ],

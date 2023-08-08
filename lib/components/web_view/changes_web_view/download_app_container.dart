@@ -13,7 +13,6 @@ class DownloadAppContainerWebView extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Stack(
       children: [
-
         // Contents of the download_app_web_view container
         Column(
           children: [

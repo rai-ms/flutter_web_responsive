@@ -16,11 +16,11 @@ class MakeConnectionWebView extends StatelessWidget {
         children: [
           Flexible(
             child: SizedBox(
-                height: 450,
-                child: Image.asset(AppImage.worldConnection)),
+                height: 450, child: Image.asset(AppImage.worldConnection)),
           ),
           Flexible(
-              child: SizedBox(width: width * .3, child: const MakeConnectionText()))
+              child: SizedBox(
+                  width: width * .3, child: const MakeConnectionText()))
         ],
       ),
     );

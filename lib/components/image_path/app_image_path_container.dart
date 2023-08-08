@@ -1,5 +1,4 @@
-class AppImage
-{
+class AppImage {
   static const String leftCard = "assets/images/left_card.png";
   static const String rightCard = "assets/images/right_card.png";
   static const String logoInfo = "assets/images/logo_info.png";
@@ -9,7 +8,8 @@ class AppImage
   static const String storeImage = "assets/images/store_image.png";
   static const String googlePlay = "assets/images/google_play.png";
   static const String appDownload = "assets/images/app_download.png";
-  static const String backgroundMultipleProfile = "assets/images/background_multipleprofile.png";
+  static const String backgroundMultipleProfile =
+      "assets/images/background_multipleprofile.png";
   static const String circleBg = "assets/images/circle_bg.png";
   static const String copyRight = "assets/images/copyright.png";
   static const String imageBulb = "assets/images/image_bulb.png";

@@ -13,17 +13,11 @@ class LoginUsingAccount extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           SizedBox(
-              height: 45,
-              width: 45,
-              child: Image.asset(AppImage.googleLogo)),
+              height: 45, width: 45, child: Image.asset(AppImage.googleLogo)),
           SizedBox(
-              height: 45,
-              width: 45,
-              child: Image.asset(AppImage.facebookLogo)),
+              height: 45, width: 45, child: Image.asset(AppImage.facebookLogo)),
           SizedBox(
-              height: 45,
-              width: 45,
-              child: Image.asset(AppImage.linkedInLogo)),
+              height: 45, width: 45, child: Image.asset(AppImage.linkedInLogo)),
         ],
       ),
     );

@@ -13,7 +13,6 @@ class DownloadAppContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-
         // Contents of the download_app container
         Container(
           height: 600,

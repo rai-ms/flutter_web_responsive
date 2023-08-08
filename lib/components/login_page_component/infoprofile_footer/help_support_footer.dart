@@ -14,8 +14,10 @@ class HelpSupportFooter extends StatelessWidget {
         Text(
           AppStrings.helpSupportFooter,
           style: TextStyle(
-            fontFamily: 'Poppins',
-              color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              fontFamily: 'Poppins',
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold),
         ),
         SizedBox(
           height: 10,

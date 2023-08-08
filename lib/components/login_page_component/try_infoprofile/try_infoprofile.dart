@@ -19,9 +19,7 @@ class TryInfoProfile extends StatelessWidget {
       child: const Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          RowColumnProviderTryInfoProfile()
-        ],
+        children: [RowColumnProviderTryInfoProfile()],
       ),
     );
   }
@@ -65,8 +63,7 @@ class ColumnProviderTryInfoProfile extends StatelessWidget {
               fontFamily: 'Poppins',
               fontSize: 30,
               fontWeight: FontWeight.w700,
-              color: AppColors.blueTextColor
-          ),
+              color: AppColors.blueTextColor),
         ),
         const Row(
           children: [
@@ -164,8 +161,7 @@ class RowProviderTryInfoProfileOne extends StatelessWidget {
               fontFamily: 'Poppins',
               fontSize: 30,
               fontWeight: FontWeight.w700,
-              color: AppColors.blueTextColor
-          ),
+              color: AppColors.blueTextColor),
         ),
         const Row(
           children: [
@@ -270,8 +266,7 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
                   fontFamily: 'Poppins',
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
-                  color: AppColors.blueTextColor
-              ),
+                  color: AppColors.blueTextColor),
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -314,12 +309,16 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(height: 20,)
+                SizedBox(
+                  height: 20,
+                )
               ],
             ),
           ],
         ),
-        SizedBox(width: width*.05,),
+        SizedBox(
+          width: width * .05,
+        ),
         Row(
           children: [
             Container(

@@ -5,6 +5,7 @@ import '../login_page_component/download_app_container/download_app_container.da
 import '../login_page_component/infoprofile_provides/infoprofile_provide.dart';
 import '../login_page_component/mutliple_profile_creative_box/multiple_profile_creative_base_class.dart';
 import '../login_page_component/top_container_combine/combine_using_stack.dart';
+
 class TabletViewLoginPage extends StatelessWidget {
   const TabletViewLoginPage({super.key});
 

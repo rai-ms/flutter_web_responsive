@@ -28,7 +28,7 @@ class CombineTopTwoItemsChangeWeb extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: width < 1000? 10: width / 30),
+      padding: EdgeInsets.symmetric(horizontal: width < 1000 ? 10 : width / 30),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

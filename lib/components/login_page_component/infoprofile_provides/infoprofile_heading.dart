@@ -13,7 +13,7 @@ class InfoProfileHeading extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const Text(
-         AppStrings.infoprofile,
+          AppStrings.infoprofile,
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 20),
         ),
@@ -22,11 +22,15 @@ class InfoProfileHeading extends StatelessWidget {
             children: [
               TextSpan(
                 text: "${AppStrings.what} ",
-                style: TextStyle(fontSize: 20, color: Colors.black,),
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                ),
               ),
               TextSpan(
                 text: AppStrings.provide,
-                style: TextStyle(fontSize: 20, color: AppColors.backgroundThemeColor),
+                style: TextStyle(
+                    fontSize: 20, color: AppColors.backgroundThemeColor),
               ),
               TextSpan(
                 text: " ${AppStrings.you}",
