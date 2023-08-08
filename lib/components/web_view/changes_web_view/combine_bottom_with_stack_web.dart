@@ -14,9 +14,18 @@ class BottomStackCombineWebView extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           const CombineFooterAndConnectionsWebView(),
-          Positioned(bottom: (width > 1120)? 260 : (width > 720)? 390 : 710, child: const TryInfoProfile()),
+          Positioned(bottom: positionOfTryFloatingContainer(width), child: const TryInfoProfile()),
         ],
       ),
     );
+  }
+
+  double positionOfTryFloatingContainer(double width) {
+    if (width == 1120) {
+      return 260.0;
+    }
+    if (width >= 1119) return 260;
+    if (width >= 720) return 390;
+    return 740.0;
   }
 }

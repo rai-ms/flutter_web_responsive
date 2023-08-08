@@ -20,15 +20,6 @@ class TryInfoProfile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            AppStrings.tryInfoProfile,
-            style: TextStyle(
-              fontFamily: 'Poppins',
-                fontSize: 30,
-                fontWeight: FontWeight.w700,
-                color: AppColors.blueTextColor
-                ),
-          ),
           RowColumnProviderTryInfoProfile()
         ],
       ),
@@ -68,6 +59,15 @@ class ColumnProviderTryInfoProfile extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Text(
+          AppStrings.tryInfoProfile,
+          style: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 30,
+              fontWeight: FontWeight.w700,
+              color: AppColors.blueTextColor
+          ),
+        ),
         const Row(
           children: [
             Icon(Icons.check),
@@ -158,6 +158,15 @@ class RowProviderTryInfoProfileOne extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Text(
+          AppStrings.tryInfoProfile,
+          style: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 30,
+              fontWeight: FontWeight.w700,
+              color: AppColors.blueTextColor
+          ),
+        ),
         const Row(
           children: [
             Row(
@@ -251,48 +260,66 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Row(
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(Icons.check),
-            SizedBox(
-              width: 13,
-            ),
             Text(
-              AppStrings.multipleProfiles,
-              style: TextStyle(fontSize: 14),
-            )
+              AppStrings.tryInfoProfile,
+              style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.blueTextColor
+              ),
+            ),
+            Row(
+              children: [
+                const Row(
+                  children: [
+                    Icon(Icons.check),
+                    SizedBox(
+                      width: 13,
+                    ),
+                    Text(
+                      AppStrings.multipleProfiles,
+                      style: TextStyle(fontSize: 14),
+                    )
+                  ],
+                ),
+                const SizedBox(width: 15),
+                const Row(
+                  children: [
+                    Icon(Icons.check),
+                    SizedBox(
+                      width: 13,
+                    ),
+                    Text(
+                      AppStrings.creative,
+                      style: TextStyle(fontSize: 14),
+                    )
+                  ],
+                ),
+                const SizedBox(width: 15),
+                const Row(
+                  children: [
+                    Icon(Icons.check),
+                    SizedBox(
+                      width: 13,
+                    ),
+                    Text(
+                      AppStrings.buildConnections,
+                      style: TextStyle(fontSize: 14),
+                    )
+                  ],
+                ),
+              ],
+            ),
           ],
         ),
-        const SizedBox(width: 15),
-        const Row(
-          children: [
-            Icon(Icons.check),
-            SizedBox(
-              width: 13,
-            ),
-            Text(
-              AppStrings.creative,
-              style: TextStyle(fontSize: 14),
-            )
-          ],
-        ),
-        const SizedBox(width: 15),
-        const Row(
-          children: [
-            Icon(Icons.check),
-            SizedBox(
-              width: 13,
-            ),
-            Text(
-              AppStrings.buildConnections,
-              style: TextStyle(fontSize: 14),
-            )
-          ],
-        ),
-        SizedBox(
-          width: width * .07,
-        ),
+        SizedBox(width: MediaQuery.of(context).size.width * .03,),
         Row(
           children: [
             Container(
@@ -331,7 +358,8 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
               )),
             ),
           ],
-        )
+        ),
+
       ],
     );
   }

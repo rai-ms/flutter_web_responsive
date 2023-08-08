@@ -6,6 +6,14 @@ import '../try_infoprofile/try_infoprofile.dart';
 class BottomStackCombine extends StatelessWidget {
   const BottomStackCombine({super.key});
 
+  double positionOfTryFloatingContainer(double width) {
+    if (width == 1120) {
+      return 260.0;
+    }
+    if (width >= 1119) return 260;
+    if (width >= 720) return 390;
+    return 740.0;
+  }
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -14,7 +22,9 @@ class BottomStackCombine extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           const CombineFooterAndConnections(),
-          Positioned(bottom: (width > 1120)? 260 : (width >= 720)? 390 : 740, child: const TryInfoProfile()),
+          Positioned(
+              bottom: positionOfTryFloatingContainer(width),
+              child: const TryInfoProfile()),
         ],
       ),
     );
