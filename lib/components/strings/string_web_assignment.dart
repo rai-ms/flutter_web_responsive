@@ -33,7 +33,7 @@ class AppStrings
   static const String downloadOurApp = "Download our App from";
   static const String makeFriendsByBuilding = "Make friends by Building connections that are relevant to you.";
   static const String theBestDomain = "The best domain for a real-time experience of the corporate world . Improving your communication and time management skills is the main prospect. PR, Sponsorship, Social media handling , Treasury, and Marketing are elements of this domain.";
-  static const String copyRightInfoProfile = "Copyright InfoprofileLTD";
+  static const String copyRightInfoProfile = "© Copyright InfoprofileLTD";
   static const String allRightsReserved = "All rights reserved";
   static const String notANormal = "Not a  normal app, its unique!";
   static const String servicesAreProvided = "Services are provided everywhere.";

@@ -10,18 +10,17 @@ class ContainerMeetYourBestLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      child: Column(
-        children: [
-          const MeetYourBestText(),
-          LoginContainer(),
-          // App Availability
-          const Padding(
-            padding: EdgeInsets.only(top: 20.0),
-            child: AppAvailableOn(),
-          ),
-        ],
-      ),
+    double width = MediaQuery.of(context).size.width;
+    return Column(
+      crossAxisAlignment: (width > 950)?CrossAxisAlignment.start: CrossAxisAlignment.center,
+      children: [
+        const MeetYourBestText(),
+        LoginContainer(),
+        // App Availability
+        Container(
+          margin: EdgeInsets.only(top:  50),
+            child: AppAvailableOn()),
+      ],
     );
   }
 }

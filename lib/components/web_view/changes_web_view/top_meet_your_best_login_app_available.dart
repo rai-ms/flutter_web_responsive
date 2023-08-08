@@ -18,6 +18,7 @@ class ContainerMeetYourBestLoginWebChanges extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               MeetYourBestText(),
               Padding(

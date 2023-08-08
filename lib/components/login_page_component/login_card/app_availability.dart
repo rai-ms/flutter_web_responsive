@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_web_assignment/components/image_path/app_image_path_container.dart';
 
 class AppAvailableOn extends StatelessWidget {
@@ -9,7 +10,7 @@ class AppAvailableOn extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     double wdStores = (width < 350) ? 130 : 160;
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: (width < 950)?MainAxisAlignment.center : MainAxisAlignment.start,
       children: [
         SizedBox(
             width: wdStores,
