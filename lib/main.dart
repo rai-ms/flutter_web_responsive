@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_assignment/pages/login_page/login_page.dart';
 
-import 'components/tablet_view/all_model_combine_provider.dart';
 
 void main() {
   runApp(const MyApp());

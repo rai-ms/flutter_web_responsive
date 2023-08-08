@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_assignment/components/mobile_view/mobile_view_loginpage.dart';
 import 'package:flutter_web_assignment/components/tablet_view/tablet_view_loginpage.dart';
@@ -12,9 +11,9 @@ class LoginPage extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
         body: (width < 451)
-            ? MobileViewLoginPage()
+            ? const MobileViewLoginPage()
             : (width > 950)
-                ? WebViewLoginPage()
-                : TabletViewLoginPage());
+                ? const WebViewLoginPage()
+                : const TabletViewLoginPage());
   }
 }

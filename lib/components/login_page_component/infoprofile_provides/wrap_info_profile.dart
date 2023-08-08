@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_assignment/components/image_path/app_image_path_container.dart';
 import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
 import 'model_provider.dart';
@@ -9,10 +10,6 @@ class WrapInfoProfileProvide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery
-        .of(context)
-        .size
-        .width;
     return Wrap(
       crossAxisAlignment: WrapCrossAlignment.center,
       spacing: 80,
@@ -23,11 +20,11 @@ class WrapInfoProfileProvide extends StatelessWidget {
             title: AppStrings.shareMedia,
             body:
             AppStrings.shareYourFavourite,
-            icon: const Icon(Icons.insert_link)),
+            icon: AppImage.iconLink),
         ProviderModelInfoProfile(
             title: AppStrings.multipleProfile,
             body: AppStrings.youCanChoose,
-            icon: const Icon(Icons.personal_injury_outlined)),
+            icon: AppImage.personIcon),
       ],
     );
   }

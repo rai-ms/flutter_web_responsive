@@ -10,7 +10,6 @@ class ContainerMeetYourBestLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Orientation orientation = MediaQuery.of(context).orientation;
     return SizedBox(
       child: Column(
         children: [

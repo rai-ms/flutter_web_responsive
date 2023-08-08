@@ -1,20 +1,21 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
 import '../../colors/colors.dart';
+import '../../image_path/app_image_path_container.dart';
 
 class ProviderModelInfoProfile extends StatefulWidget {
   Color color;
   String title, body;
-  Icon icon;
+  String icon;
   ProviderModelInfoProfile(
       {super.key,
       this.color = Colors.transparent,
       this.title = AppStrings.visitingCard,
       this.body =
           AppStrings.shareYourVisiting,
-      this.icon = const Icon(Icons.account_balance_wallet)});
+      this.icon = AppImage.iconVisitingCard
+      });
 
   @override
   State<ProviderModelInfoProfile> createState() =>
@@ -31,14 +32,15 @@ class _ProviderModelInfoProfileState extends State<ProviderModelInfoProfile> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     double width = size.width;
+    Color iconBackGroundColor = AppColors.backgroundThemeColor;
     // double? containerHeight = (width <= 450)? 150: null;
-    double? containerHeight = 100;
     return MouseRegion(
       onEnter: (_) {
         widget.color = AppColors.backgroundThemeColor;
         textColor = Colors.white;
         iconColor = AppColors.backgroundThemeColor;
         bodyTextColor = Colors.white;
+        iconBackGroundColor = AppColors.blueBlurBackground;
         setState(() {});
       },
       onExit: (_) {
@@ -46,6 +48,7 @@ class _ProviderModelInfoProfileState extends State<ProviderModelInfoProfile> {
         textColor = AppColors.backgroundThemeColor;
         bodyTextColor = Colors.black;
         iconColor = Colors.white;
+        iconBackGroundColor = AppColors.backgroundThemeColor;
         setState(() {});
       },
       child: Container(
@@ -66,9 +69,13 @@ class _ProviderModelInfoProfileState extends State<ProviderModelInfoProfile> {
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
-                    color: Colors.blue.shade200,
+                    color: iconBackGroundColor,
                     borderRadius: BorderRadius.circular(10)),
-                child: widget.icon),
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Image.asset(widget.icon),
+                ),
+            ),
             const SizedBox(
               height: 10,
             ),

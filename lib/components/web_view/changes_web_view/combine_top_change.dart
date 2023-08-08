@@ -10,7 +10,7 @@ class CombineTopLoginPageStackChangeWeb extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       child: Stack(
         children: [
           TopBackgroundLoginPage(),
@@ -34,8 +34,8 @@ class CombineTopTwoItemsChangeWeb extends StatelessWidget {
         children: [
           SizedBox(
               width: MediaQuery.of(context).size.width - 30,
-              child: NavBarLoginPage()),
-          ContainerMeetYourBestLoginWebChanges(),
+              child: const NavBarLoginPage()),
+          const ContainerMeetYourBestLoginWebChanges(),
         ],
       ),
     );

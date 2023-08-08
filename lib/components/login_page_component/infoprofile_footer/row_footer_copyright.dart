@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
 
@@ -12,11 +11,11 @@ class RowfooterCopyRight extends StatelessWidget {
       children: [
         Text(
           AppStrings.copyRightInfoProfile,
-          style: TextStyle(color: Colors.white, fontSize:  12, fontFamily: 'Poppins'),
+          style: TextStyle(color: Colors.white, fontSize:  10,),
         ),
         Text(
           AppStrings.allRightsReserved,
-          style: TextStyle(color: Colors.white, fontSize:  12),
+          style: TextStyle(color: Colors.white, fontSize:  10),
         )
       ],
     );

@@ -10,7 +10,6 @@ class ContainerMeetYourBestLoginWebChanges extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Orientation orientation = MediaQuery.of(context).orientation;
     double width = MediaQuery.of(context).size.width;
     return Padding(
       padding:
@@ -18,11 +17,11 @@ class ContainerMeetYourBestLoginWebChanges extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
+          const Column(
             children: [
               MeetYourBestText(),
               Padding(
-                padding: const EdgeInsets.only(top: 20.0),
+                padding: EdgeInsets.only(top: 20.0),
                 child: AppAvailableOn(),
               ),
             ],
