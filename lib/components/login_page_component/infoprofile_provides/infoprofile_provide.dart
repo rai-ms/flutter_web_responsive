@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_assignment/components/login_page_component/infoprofile_provides/wrap_info_profile.dart';
 
 import '../../tablet_view/all_model_combine_provider.dart';
-import 'girdi_items_infoprofile_provide.dart';
 import 'infoprofile_heading.dart';
 
 class InfoProfileProvide extends StatelessWidget {
@@ -16,16 +15,16 @@ class InfoProfileProvide extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
-        InfoProfileHeading(),
-        SizedBox(
+        const InfoProfileHeading(),
+        const SizedBox(
           height: 40,
         ),
         (width >= 950)
-            ? WrapInfoProfileProvide()
-            : AllModelCombineProviderMobileAndTabletClickable(),
+            ? const WrapInfoProfileProvide()
+            : const AllModelCombineProviderMobileAndTabletClickable(),
       ],
     );
   }

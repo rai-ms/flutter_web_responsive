@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: must_be_immutable
 import 'package:flutter/material.dart';
-import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
-
+import '../../../utils/_app_helpers/app_text/app_strings.dart';
 import '../../colors/colors.dart';
 
 class ProviderModelInfoProfile extends StatefulWidget {
@@ -31,7 +30,6 @@ class _ProviderModelInfoProfileState extends State<ProviderModelInfoProfile> {
     Size size = MediaQuery.of(context).size;
     double width = size.width;
     // double? containerHeight = (width <= 450)? 150: null;
-    double? containerHeight = 100;
     return MouseRegion(
       onEnter: (_) {
         widget.color = AppColors.backgroundThemeColor;

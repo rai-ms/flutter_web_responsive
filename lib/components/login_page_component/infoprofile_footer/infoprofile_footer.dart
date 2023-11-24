@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_assignment/components/login_page_component/infoprofile_footer/row_footer_copyright.dart';
 
@@ -18,28 +17,28 @@ class InfoProfileFooter extends StatelessWidget {
     return Container(
       color: AppColors.backgroundThemeColor,
       width: width,
-      padding: EdgeInsets.only(left: 30, right: 30, top: 120),
+      padding: const EdgeInsets.only(left: 30, right: 30, top: 120),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
-          InfoProfileLogoLink(),
-          FeatureFooter(),
-          LinkFooter(),
-          CompanyFooter(),
-          HelpSupportFooter(),
+          const InfoProfileLogoLink(),
+          const FeatureFooter(),
+          const LinkFooter(),
+          const CompanyFooter(),
+          const HelpSupportFooter(),
 
           // Divider
           Container(
             height: 1,
             width: width - 80,
             color: Colors.grey,
-            margin: EdgeInsets.symmetric(vertical: 10),
+            margin: const EdgeInsets.symmetric(vertical: 10),
           ),
 
-          RowfooterCopyRight(),
+          const RowFooterCopyRight(),
 
           //
         ],

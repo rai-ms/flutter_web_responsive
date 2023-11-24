@@ -21,6 +21,6 @@ class AppImage {
   static const String appLogo = "assets/images/logo_profile.png";
   static const String worldConnection = "assets/images/world_connection.png";
   static const String personIcon = "assets/images/iconperson.png";
-  static const String linkicon = "assets/images/linkicon.png";
-  static const String iconcard = "assets/images/iconcard.png";
+  static const String linkIcon = "assets/images/linkicon.png";
+  static const String iconCard = "assets/images/iconcard.png";
 }

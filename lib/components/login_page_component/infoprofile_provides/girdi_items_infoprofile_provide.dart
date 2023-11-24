@@ -1,21 +1,22 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'model_provider.dart';
 
 class GridItemInfoProfile extends StatelessWidget {
+  const GridItemInfoProfile({super.key});
+
   @override
   Widget build(BuildContext context) {
     Size sz = MediaQuery.of(context).size;
     return Container(
-      padding: EdgeInsets.only(left: 20, right: 20),
+      padding: const EdgeInsets.only(left: 20, right: 20),
       width: sz.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GridView.extent(
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             maxCrossAxisExtent: (sz.width <= 450) ? 400 : 500,
             childAspectRatio: (sz.width <= 450) ? 1 / .9 : 1 / 1.4,
@@ -27,12 +28,12 @@ class GridItemInfoProfile extends StatelessWidget {
                   title: "Share Media",
                   body:
                       "Share your favourite images, video or any link you feel like sharing with your connections or community. ",
-                  icon: Icon(Icons.insert_link)),
+                  icon: const Icon(Icons.insert_link)),
               ProviderModelInfoProfile(
                   title: "Multiple Profile",
                   body:
                       "You can choose to make multiple profiles for your accounts.",
-                  icon: Icon(Icons.personal_injury_outlined)),
+                  icon: const Icon(Icons.personal_injury_outlined)),
             ],
           ),
         ],

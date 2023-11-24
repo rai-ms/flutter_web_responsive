@@ -11,14 +11,18 @@ class TopBackgroundLoginPage extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: Stack(
         children: [
-          Container(
-              constraints: const BoxConstraints(
-                maxHeight: 744,
-              ),
-              child: Image.asset(AppImage.leftCard)),
           Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                  constraints: const BoxConstraints(
+                    maxHeight: 744,
+                  ),
+                  child: Image.asset(AppImage.leftCard)),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const SizedBox(),
               Flexible(
@@ -26,10 +30,7 @@ class TopBackgroundLoginPage extends StatelessWidget {
                       constraints: const BoxConstraints(
                         maxHeight: 744,
                       ),
-                      child: Image.asset(
-                        AppImage.rightCard,
-                        alignment: Alignment.bottomRight,
-                      ))),
+                      child: Image.asset(AppImage.rightCard, alignment: Alignment.bottomRight,))),
             ],
           ),
         ],

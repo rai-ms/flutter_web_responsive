@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
+import '../../../utils/_app_helpers/app_text/app_strings.dart';
 
 class CompanyFooter extends StatelessWidget {
   const CompanyFooter({super.key});

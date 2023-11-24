@@ -10,14 +10,13 @@ class ContainerMeetYourBestLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Orientation orientation = MediaQuery.of(context).orientation;
-    return SizedBox(
+    return const SizedBox(
       child: Column(
         children: [
-          const MeetYourBestText(),
+          MeetYourBestText(),
           LoginContainer(),
           // App Availability
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(top: 20.0),
             child: AppAvailableOn(),
           ),

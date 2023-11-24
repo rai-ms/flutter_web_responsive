@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
+import '../../../utils/_app_helpers/app_text/app_strings.dart';
 
-class RowfooterCopyRight extends StatelessWidget {
-  const RowfooterCopyRight({super.key});
+class RowFooterCopyRight extends StatelessWidget {
+  const RowFooterCopyRight({super.key});
 
   @override
   Widget build(BuildContext context) {

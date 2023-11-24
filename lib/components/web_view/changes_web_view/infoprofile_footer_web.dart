@@ -60,7 +60,7 @@ class InfoProfileFooterBreakOne extends StatelessWidget {
             color: Colors.grey,
             margin: const EdgeInsets.symmetric(vertical: 10),
           ),
-          const RowfooterCopyRight(),
+          const RowFooterCopyRight(),
 
           //
         ],
@@ -135,7 +135,7 @@ class InfoProfileFooterBreakTwo extends StatelessWidget {
             color: Colors.white24,
             margin: const EdgeInsets.symmetric(vertical: 10),
           ),
-          const RowfooterCopyRight(),
+          const RowFooterCopyRight(),
 
           //
         ],
@@ -202,7 +202,7 @@ class InfoProfileFooterBreakThree extends StatelessWidget {
             color: Colors.grey,
             margin: const EdgeInsets.symmetric(vertical: 10),
           ),
-          const RowfooterCopyRight(),
+          const RowFooterCopyRight(),
 
           //
         ],

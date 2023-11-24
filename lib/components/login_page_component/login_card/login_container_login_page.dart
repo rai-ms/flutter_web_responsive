@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
-
+import '../../../utils/_app_helpers/app_text/app_strings.dart';
 import '../../colors/colors.dart';
 import 'dont_have_account.dart';
 import 'login_button.dart';
@@ -9,14 +7,27 @@ import 'login_using_another_account.dart';
 import 'login_with_otp.dart';
 import 'or_container_row.dart';
 
-class LoginContainer extends StatelessWidget {
-  LoginContainer({super.key});
-  var usercontroller = TextEditingController();
+class LoginContainer extends StatefulWidget {
+  const LoginContainer({super.key});
+
+  @override
+  State<LoginContainer> createState() => _LoginContainerState();
+}
+
+class _LoginContainerState extends State<LoginContainer> {
+  var userController = TextEditingController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    userController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       constraints: const BoxConstraints(
-        maxWidth: 470,
+        maxWidth: 400,
       ),
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.only(left: 15, top: 20, right: 15, bottom: 10),
@@ -81,7 +92,7 @@ class LoginContainer extends StatelessWidget {
             height: 20,
           ),
           TextFormField(
-            controller: usercontroller,
+            controller: userController,
             decoration: InputDecoration(
               filled: true,
               fillColor: Colors.white,

@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_assignment/components/image_path/app_image_path_container.dart';
-
+import '../../../utils/_app_helpers/app_text/app_strings.dart';
 import '../../colors/colors.dart';
-import '../../strings/string_web_assignment.dart';
 import '../backgrounds/download_our_app_background.dart';
 
 class DownloadAppContainer extends StatelessWidget {

@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../../nav_bar_loginpage/nav_bar.dart';
+import '../../nav_bar_login_page/nav_bar.dart';
 import '../backgrounds/top_background_login_page.dart';
 import '../meet_your_best_and_login.dart';
 

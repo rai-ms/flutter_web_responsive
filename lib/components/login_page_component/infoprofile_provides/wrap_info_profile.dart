@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
-
+import '../../../utils/_app_helpers/app_text/app_strings.dart';
 import 'model_provider.dart';
 
 class WrapInfoProfileProvide extends StatelessWidget {
@@ -9,7 +7,6 @@ class WrapInfoProfileProvide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     return Wrap(
       crossAxisAlignment: WrapCrossAlignment.center,
       spacing: 80,

@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
-
+import '../../../utils/_app_helpers/app_text/app_strings.dart';
 import '../../image_path/app_image_path_container.dart';
 import '../../login_page_component/backgrounds/download_our_app_background.dart';
 
@@ -10,10 +8,8 @@ class DownloadAppContainerWebView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     return Stack(
       children: [
-        // Contents of the download_app_web_view container
         Column(
           children: [
             Container(

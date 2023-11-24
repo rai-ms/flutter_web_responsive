@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
-
+import '../../../utils/_app_helpers/app_text/app_strings.dart';
 import '../../colors/colors.dart';
 
 class TryInfoProfile extends StatelessWidget {
@@ -8,7 +7,6 @@ class TryInfoProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     return Container(
       padding: const EdgeInsets.only(left: 25, right: 25, top: 10),
       margin: const EdgeInsets.symmetric(horizontal: 30),
@@ -57,7 +55,7 @@ class ColumnProviderTryInfoProfile extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           AppStrings.tryInfoProfile,
           style: TextStyle(
               fontFamily: 'Poppins',
@@ -155,7 +153,7 @@ class RowProviderTryInfoProfileOne extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        const Text(
           AppStrings.tryInfoProfile,
           style: TextStyle(
               fontFamily: 'Poppins',
@@ -257,7 +255,7 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Row(
       children: [
-        Column(
+        const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -271,7 +269,7 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Row(
+                Row(
                   children: [
                     Icon(Icons.check),
                     SizedBox(
@@ -283,8 +281,8 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
                     )
                   ],
                 ),
-                const SizedBox(width: 15),
-                const Row(
+                SizedBox(width: 15),
+                Row(
                   children: [
                     Icon(Icons.check),
                     SizedBox(
@@ -296,8 +294,8 @@ class RowProviderTryInfoProfileTwo extends StatelessWidget {
                     )
                   ],
                 ),
-                const SizedBox(width: 15),
-                const Row(
+                SizedBox(width: 15),
+                Row(
                   children: [
                     Icon(Icons.check),
                     SizedBox(

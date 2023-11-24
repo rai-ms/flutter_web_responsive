@@ -1,7 +1,8 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_web_assignment/components/image_path/app_image_path_container.dart';
-import 'package:flutter_web_assignment/components/strings/string_web_assignment.dart';
-
+import '../../utils/_app_helpers/app_text/app_strings.dart';
 import '../colors/colors.dart';
 
 class AllModelCombineProviderMobileAndTabletClickable extends StatefulWidget {
@@ -24,20 +25,20 @@ class _AllModelCombineProviderMobileAndTabletClickableState
       children: [
         InkWell(
           onTap: () {
-            set_index(0);
+            setIndex(0);
             setState(() {});
           },
           child: ProviderModelInfoProfileOne(isTrue: isBackgroundEnable[0]),
         ),
         InkWell(
             onTap: () {
-              set_index(1);
+              setIndex(1);
               setState(() {});
             },
             child: ProviderModelInfoProfileTwo(isTrue: isBackgroundEnable[1])),
         InkWell(
             onTap: () {
-              set_index(2);
+              setIndex(2);
               setState(() {});
             },
             child: ProviderModelInfoProfileThree(
@@ -47,7 +48,7 @@ class _AllModelCombineProviderMobileAndTabletClickableState
     );
   }
 
-  void set_index(int index) {
+  void setIndex(int index) {
     if (isBackgroundEnable[index] != true) {
       isBackgroundEnable[index] = true;
       if (index == 0) {
@@ -98,7 +99,6 @@ class ProviderModelInfoProfileOne extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double width = size.width;
     // double? containerHeight = (width <= 450)? 150: null;
-    double? containerHeight = 100;
     setColor();
     return Container(
       constraints: BoxConstraints(
@@ -122,7 +122,7 @@ class ProviderModelInfoProfileOne extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(15.0),
               child: Image.asset(
-                AppImage.iconcard,
+                AppImage.iconCard,
               ),
             ),
           ),
@@ -180,7 +180,6 @@ class ProviderModelInfoProfileTwo extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double width = size.width;
     // double? containerHeight = (width <= 450)? 150: null;
-    double? containerHeight = 100;
     return Container(
       constraints: BoxConstraints(
         maxWidth: (width <= 450) ? 210 : 330,
@@ -203,7 +202,7 @@ class ProviderModelInfoProfileTwo extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(15.0),
               child: Image.asset(
-                AppImage.linkicon,
+                AppImage.linkIcon,
               ),
             ),
           ),
@@ -262,7 +261,6 @@ class ProviderModelInfoProfileThree extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double width = size.width;
     // double? containerHeight = (width <= 450)? 150: null;
-    double? containerHeight = 100;
     return Container(
       constraints: BoxConstraints(
         maxWidth: (width <= 450) ? 210 : 330,
